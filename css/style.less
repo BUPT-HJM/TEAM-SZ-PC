@@ -1,0 +1,129 @@
+@charset "utf-8";
+/**
+ * 引入字体
+ */
+@font-face {
+	font-family: HYGangYiTi-45W;
+	src: url('../font/HYGangYiTi-45W.ttf');
+}
+//定义圆角大小
+.border-radius(@radius){
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+	-ms-border-radius: @radius;
+	-o-border-radius: @radius;
+	border-radius: @radius;
+}
+//定义动画
+.animation(@animation-name,@animation-duration,@animation-timing-function,
+           @animation-delay,@animation-iteration-count,@animation-direction){
+   animation: @arguments;
+   /* Firefox: */
+   -moz-animation: @arguments;
+   /* Safari 和 Chrome: */
+   -webkit-animation: @arguments;
+   /* Opera: */
+   -o-animation: @arguments;
+}
+
+//通用
+html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,table,caption,th,td,form,fieldset,legend,input,button,textarea,menu
+{margin:0;padding:0;}
+
+//欢迎页背景图
+#bg-1 {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
+//页面容器
+#container {
+
+}
+
+//logo
+@logo-img-width: 200px;
+@logo-position-top: 200px;
+.logo {
+	position: relative;
+	top: @logo-position-top;
+	width: 50%;
+	margin: 0 auto;
+	text-align: center;
+	& img {
+		display: block;
+		width: @logo-img-width;
+		height: @logo-img-width;
+		margin: 0 auto;
+	}
+	& h1 {
+		color: #c8c4c1;
+		font-family: HYGangYiTi-45W;
+		font-weight: normal;
+	}
+}
+
+//欢迎按钮
+@welcome-circle-width: 100px;
+.welcome-circle {
+	position: relative;
+	bottom: -300px;
+	width: @welcome-circle-width;
+	height: @welcome-circle-width;
+	border: #fff solid 2px;
+	.border-radius(@welcome-circle-width);
+	margin: 0 auto;
+	text-align: center;
+	line-height: @welcome-circle-width;
+	cursor: pointer;
+	& h1 {
+		display: inline;
+		color: #fff;
+		font-family: HYGangYiTi-45W;
+		font-weight: normal;
+	}
+	&:hover {
+		.animation(ripple,1s,linear,0s,infinite,normal);
+	}
+}
+
+/***CSS定义的keyframes如下：****/
+@keyframes ripple
+{
+  0% {
+    box-shadow: 0 0 0 0 rgba(255,255,255, 0.1), 0 0 0 10px rgba(255,255,255, 0.1), 0 0 0 20px rgba(255,255,255, 0.1), 0 0 0 30px rgba(255,255,255, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 0 10px rgba(255,255,255, 0.1), 0 0 0 20px rgba(255,255,255, 0.1), 0 0 0 30px rgba(255,255,255, 0.1), 0 0 0 40px rgba(255,255,255, 0);
+  }
+}
+//不知为何报错
+/*@-moz-keyframes ripple
+{
+  0% {
+    box-shadow: 0 0 0 0 rgba(255,255,255, 0.1), 0 0 0 20px rgba(255,255,255, 0.1), 0 0 0 40px rgba(255,255,255, 0.1), 0 0 0 60px rgba(255,255,255, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 0 20px rgba(255,255,255, 0.1), 0 0 0 40px rgba(255,255,255, 0.1), 0 0 0 60px rgba(255,255,255, 0.1), 0 0 0 80px rgba(255,255,255, 0);
+  }
+}
+@-webkit-keyframes ripple
+{
+ 0% {
+    box-shadow: 0 0 0 0 rgba(255,255,255, 0.1), 0 0 0 20px rgba(255,255,255, 0.1), 0 0 0 40px rgba(255,255,255, 0.1), 0 0 0 60px rgba(255,255,255, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 0 20px rgba(255,255,255, 0.1), 0 0 0 40px rgba(255,255,255, 0.1), 0 0 0 60px rgba(255,255,255, 0.1), 0 0 0 80px rgba(255,255,255, 0);
+  }
+}
+@-o-keyframes ripple
+{
+ 0% {
+    box-shadow: 0 0 0 0 rgba(255,255,255, 0.1), 0 0 0 20px rgba(255,255,255, 0.1), 0 0 0 40px rgba(255,255,255, 0.1), 0 0 0 60px rgba(255,255,255, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 0 20px rgba(255,255,255, 0.1), 0 0 0 40px rgba(255,255,255, 0.1), 0 0 0 60px rgba(255,255,255, 0.1), 0 0 0 80px rgba(255,255,255, 0);
+  }
+}*/
