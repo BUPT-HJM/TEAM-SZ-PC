@@ -1,11 +1,4 @@
 @charset "utf-8";
-/**
- * 引入字体
- */
-@font-face {
-  font-family: HYGangYiTi-45W;
-  src: url('../font/HYGangYiTi-45W.ttf');
-}
 html,
 body,
 h1,
@@ -53,40 +46,34 @@ menu {
   margin: 0 auto;
   text-align: center;
 }
-.logo img {
+.logo .logo-img {
   display: block;
   width: 200px;
   height: 200px;
   margin: 0 auto;
 }
-.logo h1 {
-  color: #c8c4c1;
-  font-family: HYGangYiTi-45W;
-  font-weight: normal;
+.middle-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 .welcome-circle {
   position: relative;
   bottom: -300px;
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   border: #fff solid 2px;
-  -webkit-border-radius: 100px;
-  -moz-border-radius: 100px;
-  -ms-border-radius: 100px;
-  -o-border-radius: 100px;
-  border-radius: 100px;
+  -webkit-border-radius: 80px;
+  -moz-border-radius: 80px;
+  -ms-border-radius: 80px;
+  -o-border-radius: 80px;
+  border-radius: 80px;
   margin: 0 auto;
-  text-align: center;
-  line-height: 100px;
   cursor: pointer;
-}
-.welcome-circle h1 {
-  display: inline;
-  color: #fff;
-  font-family: HYGangYiTi-45W;
-  font-weight: normal;
-}
-.welcome-circle:hover {
   animation: ripple 1s linear 0s infinite normal;
   /* Firefox: */
   -moz-animation: ripple 1s linear 0s infinite normal;
@@ -94,6 +81,45 @@ menu {
   -webkit-animation: ripple 1s linear 0s infinite normal;
   /* Opera: */
   -o-animation: ripple 1s linear 0s infinite normal;
+}
+.welcome-circle img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  transition: all 0.8s;
+  -webkit-transition: all 0.8s;
+  opacity: 0;
+}
+.welcome-circle .small-circle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
+  border: #fff solid 2px;
+  background-color: #fff;
+  transition: all 0.8s;
+  -webkit-transition: all 0.8s;
+  opacity: 1;
+}
+.welcome-circle:hover img {
+  opacity: 1;
+}
+.welcome-circle:hover .small-circle {
+  opacity: 0;
 }
 /***CSS定义的keyframes如下：****/
 @keyframes ripple {
