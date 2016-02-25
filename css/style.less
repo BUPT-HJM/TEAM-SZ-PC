@@ -67,6 +67,20 @@ html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,tab
 	-o-transform: translate(-50%,-50%);
 	transform: translate(-50%,-50%);
 }
+//小scale的transform样式
+.small-scale-transform {
+	-webkit-transform: translate(-50%,-50%) scale(0.1,0.1);
+	-ms-transform: translate(-50%,-50%) scale(0.1,0.1);
+	-o-transform: translate(-50%,-50%) scale(0.1,0.1);
+	transform: translate(-50%,-50%) scale(0.1,0.1);
+}
+//大scale的transform样式
+.big-scale-transform {
+	-webkit-transform: translate(-50%,-50%) scale(1,1);
+	-ms-transform: translate(-50%,-50%) scale(1,1);
+	-o-transform: translate(-50%,-50%) scale(1,1);
+	transform: translate(-50%,-50%) scale(1,1);
+}
 //欢迎按钮
 @welcome-circle-width: 80px;
 @small-circle-width: 20px;
@@ -76,36 +90,40 @@ html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,tab
 	width: @welcome-circle-width;
 	height: @welcome-circle-width;
 	border: #fff solid 2px;
-	.border-radius(@welcome-circle-width);
 	margin: 0 auto;
 	cursor: pointer;
+	.border-radius(@welcome-circle-width);
 	.animation(ripple,1s,linear,0s,infinite,normal);
 	& img {
-		.middle-center;
-		transition: all 0.8s;
-		-webkit-transition: all 0.8s;
+		transition: all 0.8s ease;
+		-webkit-transition: all 0.8s ease;
 		opacity: 0;
+		.middle-center;
+		.small-scale-transform;
 	}
 	& .small-circle {
-		.middle-center;
 		width: @small-circle-width;
 		height: @small-circle-width;
-		.border-radius(@small-circle-width);
 		border: #fff solid 2px;
 		background-color: #fff;
-		transition: all 0.8s;
-		-webkit-transition: all 0.8s;
+		transition: all 0.8s ease;
+		-webkit-transition: all 0.8s ease;
 		opacity: 1;
+		.middle-center;
+		.border-radius(@small-circle-width);
+		.big-scale-transform;
 	}
 	&:hover img {
 		opacity: 1;
+		.big-scale-transform;
 	}
 	&:hover .small-circle {
 		opacity: 0;
+		.small-scale-transform;
 	}
 }
 
-/***CSS定义的keyframes如下：****/
+/*ripple动画*/
 @keyframes ripple
 {
   0% {
