@@ -19,44 +19,14 @@
    /* Opera: */
    -o-animation: @arguments;
 }
-
-//通用
-html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,table,caption,th,td,form,fieldset,legend,input,button,textarea,menu
-{margin:0;padding:0;}
-
-//欢迎页背景图
-#bg-1 {
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	z-index: -1;
+//定义过渡
+.transition (@prop: all, @time: 1s, @ease: linear) {
+    -webkit-transition: @prop @time @ease;
+    -moz-transition: @prop @time @ease;
+    -o-transition: @prop @time @ease;
+    -ms-transition: @prop @time @ease;
+    transition: @prop @time @ease;
 }
-
-//页面容器
-#container {
-
-}
-
-//logo
-@logo-img-width: 200px;
-@logo-position-top: 200px;
-.logo {
-	position: relative;
-	top: @logo-position-top;
-	width: 50%;
-	margin: 0 auto;
-	text-align: center;
-	.logo-img {
-		display: block;
-		width: @logo-img-width;
-		height: @logo-img-width;
-		margin: 0 auto;
-	}
-	.logo-font {
-
-	}
-}
-
 //垂直居中样式
 .middle-center {
 	position: absolute;
@@ -67,60 +37,118 @@ html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,tab
 	-o-transform: translate(-50%,-50%);
 	transform: translate(-50%,-50%);
 }
-//小scale的transform样式
-.small-scale-transform {
-	-webkit-transform: translate(-50%,-50%) scale(0.1,0.1);
-	-ms-transform: translate(-50%,-50%) scale(0.1,0.1);
-	-o-transform: translate(-50%,-50%) scale(0.1,0.1);
-	transform: translate(-50%,-50%) scale(0.1,0.1);
+
+
+//通用
+html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,table,caption,th,td,form,fieldset,legend,input,button,textarea,menu
+{margin:0;padding:0;}
+
+//欢迎页背景图
+#bg-1,#bg-2 {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	.transition();
 }
-//大scale的transform样式
-.big-scale-transform {
-	-webkit-transform: translate(-50%,-50%) scale(1,1);
-	-ms-transform: translate(-50%,-50%) scale(1,1);
-	-o-transform: translate(-50%,-50%) scale(1,1);
-	transform: translate(-50%,-50%) scale(1,1);
+//首页背景图
+#bg-2 {
+	z-index: -2;
 }
+
+//页面容器
+#container {
+}
+
+//logo
+@logo-img-width: 200px;
+@logo-position-top: 320px;
+.logo {
+	.middle-center;
+	top: @logo-position-top;
+	width: 50%;
+	margin: 0 auto;
+	text-align: center;
+	.transition(all,2s,ease-in-out);
+	.logo-img {
+		position: relative;
+		display: block;
+		width: @logo-img-width;
+		height: @logo-img-width;
+		margin: 0 auto;
+		.transition(all,2s,ease-in-out);
+	}
+	.logo-font {
+		position: relative;
+		left: 0;
+		.transition();
+	}
+}
+
+//调整scale的transform样式
+.scale-transform(@x,@y) {
+	-webkit-transform: translate(-50%,-50%) scale(@x,@y);
+	-ms-transform: translate(-50%,-50%) scale(@x,@y);
+	-o-transform: translate(-50%,-50%) scale(@x,@y);
+	transform: translate(-50%,-50%) scale(@x,@y);
+}
+
 //欢迎按钮
+@welcome-circle-top: 620px;
 @welcome-circle-width: 80px;
 @small-circle-width: 20px;
 .welcome-circle {
-	position: relative;
-	bottom: -300px;
+	.middle-center;
+	top: @welcome-circle-top;
 	width: @welcome-circle-width;
 	height: @welcome-circle-width;
 	border: #fff solid 2px;
-	margin: 0 auto;
 	cursor: pointer;
 	.border-radius(@welcome-circle-width);
 	.animation(ripple,1s,linear,0s,infinite,normal);
+	.transition(all,2s,ease-in-out);
 	& img {
-		transition: all 0.8s ease;
-		-webkit-transition: all 0.8s ease;
+		.transition(all,0.8s,ease);
 		opacity: 0;
 		.middle-center;
-		.small-scale-transform;
+		.scale-transform(0.1,0.1);
 	}
 	& .small-circle {
 		width: @small-circle-width;
 		height: @small-circle-width;
 		border: #fff solid 2px;
 		background-color: #fff;
-		transition: all 0.8s ease;
-		-webkit-transition: all 0.8s ease;
+		.transition(all,0.8s,ease);
 		opacity: 1;
 		.middle-center;
 		.border-radius(@small-circle-width);
-		.big-scale-transform;
+		.scale-transform(1,1);
 	}
 	&:hover img {
 		opacity: 1;
-		.big-scale-transform;
+		.scale-transform(1,1);
 	}
 	&:hover .small-circle {
 		opacity: 0;
-		.small-scale-transform;
+		.scale-transform(0.1,0.1);
 	}
+}
+
+//logo进入首页，变动
+.logo-left-small {
+	left: 300px;
+	.scale-transform(0.8,0.8);
+}
+//logo-font进入首页，变动
+.logo-font-change {
+	left: 350px!important;
+	top: -20px;
+	.scale-transform(1.5,1.5);
+}
+//welcome-circle进入首页，变动
+.welcome-circle-change {
+	left: 95%;
+	top: 100px;
 }
 
 /*ripple动画*/

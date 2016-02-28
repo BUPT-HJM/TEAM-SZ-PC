@@ -1,4 +1,13 @@
 @charset "utf-8";
+.middle-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
 html,
 body,
 h1,
@@ -33,26 +42,22 @@ menu {
   margin: 0;
   padding: 0;
 }
-#bg-1 {
+#bg-1,
+#bg-2 {
   position: fixed;
   width: 100%;
   height: 100%;
   z-index: -1;
+  -webkit-transition: all 1s linear;
+  -moz-transition: all 1s linear;
+  -o-transition: all 1s linear;
+  -ms-transition: all 1s linear;
+  transition: all 1s linear;
+}
+#bg-2 {
+  z-index: -2;
 }
 .logo {
-  position: relative;
-  top: 200px;
-  width: 50%;
-  margin: 0 auto;
-  text-align: center;
-}
-.logo .logo-img {
-  display: block;
-  width: 200px;
-  height: 200px;
-  margin: 0 auto;
-}
-.middle-center {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -60,26 +65,49 @@ menu {
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  top: 320px;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  -webkit-transition: all 2s ease-in-out;
+  -moz-transition: all 2s ease-in-out;
+  -o-transition: all 2s ease-in-out;
+  -ms-transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out;
 }
-.small-scale-transform {
-  -webkit-transform: translate(-50%, -50%) scale(0.1, 0.1);
-  -ms-transform: translate(-50%, -50%) scale(0.1, 0.1);
-  -o-transform: translate(-50%, -50%) scale(0.1, 0.1);
-  transform: translate(-50%, -50%) scale(0.1, 0.1);
+.logo .logo-img {
+  position: relative;
+  display: block;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  -webkit-transition: all 2s ease-in-out;
+  -moz-transition: all 2s ease-in-out;
+  -o-transition: all 2s ease-in-out;
+  -ms-transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out;
 }
-.big-scale-transform {
-  -webkit-transform: translate(-50%, -50%) scale(1, 1);
-  -ms-transform: translate(-50%, -50%) scale(1, 1);
-  -o-transform: translate(-50%, -50%) scale(1, 1);
-  transform: translate(-50%, -50%) scale(1, 1);
+.logo .logo-font {
+  position: relative;
+  left: 0;
+  -webkit-transition: all 1s linear;
+  -moz-transition: all 1s linear;
+  -o-transition: all 1s linear;
+  -ms-transition: all 1s linear;
+  transition: all 1s linear;
 }
 .welcome-circle {
-  position: relative;
-  bottom: -300px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  top: 620px;
   width: 80px;
   height: 80px;
   border: #fff solid 2px;
-  margin: 0 auto;
   cursor: pointer;
   -webkit-border-radius: 80px;
   -moz-border-radius: 80px;
@@ -93,10 +121,18 @@ menu {
   -webkit-animation: ripple 1s linear 0s infinite normal;
   /* Opera: */
   -o-animation: ripple 1s linear 0s infinite normal;
+  -webkit-transition: all 2s ease-in-out;
+  -moz-transition: all 2s ease-in-out;
+  -o-transition: all 2s ease-in-out;
+  -ms-transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out;
 }
 .welcome-circle img {
-  transition: all 0.8s ease;
   -webkit-transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
+  -ms-transition: all 0.8s ease;
+  transition: all 0.8s ease;
   opacity: 0;
   position: absolute;
   left: 50%;
@@ -115,8 +151,11 @@ menu {
   height: 20px;
   border: #fff solid 2px;
   background-color: #fff;
-  transition: all 0.8s ease;
   -webkit-transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
+  -ms-transition: all 0.8s ease;
+  transition: all 0.8s ease;
   opacity: 1;
   position: absolute;
   left: 50%;
@@ -148,6 +187,25 @@ menu {
   -ms-transform: translate(-50%, -50%) scale(0.1, 0.1);
   -o-transform: translate(-50%, -50%) scale(0.1, 0.1);
   transform: translate(-50%, -50%) scale(0.1, 0.1);
+}
+.logo-left-small {
+  left: 300px;
+  -webkit-transform: translate(-50%, -50%) scale(0.8, 0.8);
+  -ms-transform: translate(-50%, -50%) scale(0.8, 0.8);
+  -o-transform: translate(-50%, -50%) scale(0.8, 0.8);
+  transform: translate(-50%, -50%) scale(0.8, 0.8);
+}
+.logo-font-change {
+  left: 350px!important;
+  top: -20px;
+  -webkit-transform: translate(-50%, -50%) scale(1.5, 1.5);
+  -ms-transform: translate(-50%, -50%) scale(1.5, 1.5);
+  -o-transform: translate(-50%, -50%) scale(1.5, 1.5);
+  transform: translate(-50%, -50%) scale(1.5, 1.5);
+}
+.welcome-circle-change {
+  left: 95%;
+  top: 100px;
 }
 /*ripple动画*/
 @keyframes ripple {
