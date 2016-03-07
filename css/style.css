@@ -217,6 +217,58 @@ menu {
   -o-transform: translate(-50%, -50%) scale(1, 1) !important;
   transform: translate(-50%, -50%) scale(1, 1) !important;
 }
+.nav-line {
+  position: absolute;
+  top: 50px;
+  right: 5%;
+  width: 600px;
+  height: 100px;
+  background: url("../img/line.png") 50% 50% repeat-x;
+}
+.nav-line .nav-item {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  float: left;
+}
+.nav-line .nav-item img {
+  position: absolute;
+  left: -10px;
+  top: 5px;
+  height: 20px;
+}
+.nav-line .nav-item .nav-hover {
+  left: -5px;
+  top: 61px;
+  height: 8px;
+  width: 24px;
+}
+.nav-line .nav-index {
+  left: 5%;
+}
+.nav-line .nav-timeline {
+  left: 20%;
+}
+.nav-line .nav-contact {
+  left: 35%;
+}
+.nav-line .nav-circle {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  border-radius: 15px;
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+}
 /*ripple动画*/
 @keyframes ripple {
   0% {

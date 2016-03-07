@@ -134,6 +134,7 @@ html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,tab
 	}
 }
 
+@welcome-circle-change-top: 100px;
 //logo进入首页，变动
 .logo-left-small {
 	left: 300px;
@@ -148,7 +149,7 @@ html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,tab
 //welcome-circle进入首页，变动
 .welcome-circle-change {
 	left: 95%;
-	top: 100px;
+	top: @welcome-circle-change-top;
 }
 //welcome-circle-img进入首页，变动,消除hover的样式
 .welcome-circle-img-change {
@@ -160,6 +161,56 @@ html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,tab
 	.scale-transform(1,1)!important;
 }
 
+@nav-circle-width: 15px;//
+//右上角菜单
+.nav-line {
+	position: absolute;
+	top:  50px;
+	right: 5%;
+	width: 600px;
+	height: 100px;
+	background: url("../img/line.png") 50% 50% repeat-x;
+	& .nav-item {
+		position: relative;
+		width: 100px;
+		height: 100px;
+		cursor: pointer;
+		float: left;
+		& img {
+			position: absolute;
+			left: -10px;
+			top: 5px;
+			height: 20px;
+		}
+		& .nav-hover {
+			left: -5px;
+			top: 61px;
+			height: 8px;
+			width: 24px;
+		}
+	}
+	& .nav-index {
+		left: 5%;
+	}
+	& .nav-timeline {
+		left: 20%;
+	}
+	& .nav-contact {
+		left: 35%;
+	}
+	& .nav-circle {
+		position: relative;
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		-o-transform: translateY(-50%);
+		transform: translateY(-50%);
+		.border-radius(@nav-circle-width);
+		width: @nav-circle-width;
+		height: @nav-circle-width;
+		background-color: #fff;
+	}
+}
 /*ripple动画*/
 @keyframes ripple
 {
