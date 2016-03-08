@@ -12,8 +12,12 @@ $(function(){
 				$(".small-circle").addClass("small-circle-change");
 			});
 		setTimeout(nav_change,1500);
+		setTimeout(introduction_show,2000);
 	});
 	function nav_change(){
 		$(".nav-line").addClass(" nav-line-change");
+	};
+	function introduction_show(){
+		$(".introduction").addClass(" introduction-show");
 	};
 });

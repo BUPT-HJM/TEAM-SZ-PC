@@ -41,6 +41,7 @@ textarea,
 menu {
   margin: 0;
   padding: 0;
+  font-family: "Microsoft Yahei", simSun, Arial;
 }
 #bg-1,
 #bg-2 {
@@ -314,6 +315,33 @@ menu {
 }
 .share-join-show {
   opacity: 1;
+}
+.introduction {
+  position: absolute;
+  left: 200px;
+  top: 400px;
+  width: 800px;
+  height: 100px;
+  padding: 20px;
+  color: #ad956c;
+  opacity: 0;
+  /*-webkit-transform: perspective(200px) rotateX(180deg);
+	-ms-transform: perspective(200px) rotateX(180deg);
+	-o-transform: perspective(200px) rotateX(180deg);
+	transform: perspective(200px) rotateX(180deg);
+	transform-origin: top center;*/
+  -webkit-transition: all 2s linear;
+  -moz-transition: all 2s linear;
+  -o-transition: all 2s linear;
+  -ms-transition: all 2s linear;
+  transition: all 2s linear;
+}
+.introduction-show {
+  opacity: 1;
+  /*-webkit-transform: perspective(800px) rotateX(0deg);
+	-ms-transform: perspective(800px) rotateX(0deg);
+	-o-transform: perspective(800px) rotateX(0deg);
+	transform: perspective(800px) rotateX(0deg);*/
 }
 /*ripple动画*/
 @keyframes ripple {

@@ -41,7 +41,7 @@
 
 //通用
 html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,table,caption,th,td,form,fieldset,legend,input,button,textarea,menu
-{margin:0;padding:0;}
+{margin:0;padding:0;font-family:"Microsoft Yahei",simSun,Arial;}
 
 //欢迎页背景图
 #bg-1,#bg-2 {
@@ -249,6 +249,35 @@ html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,tab
 .share-join-show {
 	opacity: 1;
 }
+
+//团队介绍
+.introduction {
+	position: absolute;
+	left: 200px;
+	top: 400px;
+	width: 800px;
+	height: 100px;
+	padding: 20px;
+	color: #ad956c;
+	opacity: 0;
+	//旋转效果
+	/*-webkit-transform: perspective(200px) rotateX(180deg);
+	-ms-transform: perspective(200px) rotateX(180deg);
+	-o-transform: perspective(200px) rotateX(180deg);
+	transform: perspective(200px) rotateX(180deg);
+	transform-origin: top center;*/
+	.transition(all,2s,linear);
+}
+//进入首页团队介绍变动旋转的效果
+.introduction-show {
+	opacity: 1;
+	//进入首页团队介绍变动旋转的效果
+	/*-webkit-transform: perspective(800px) rotateX(0deg);
+	-ms-transform: perspective(800px) rotateX(0deg);
+	-o-transform: perspective(800px) rotateX(0deg);
+	transform: perspective(800px) rotateX(0deg);*/
+}
+
 
 /*ripple动画*/
 @keyframes ripple
