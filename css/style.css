@@ -250,11 +250,11 @@ menu {
   height: 8px;
   width: 24px;
   opacity: 0;
-  -webkit-transition: all 0.5s linear;
-  -moz-transition: all 0.5s linear;
-  -o-transition: all 0.5s linear;
-  -ms-transition: all 0.5s linear;
-  transition: all 0.5s linear;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 .nav-line .nav-index {
   left: 5%;
@@ -310,6 +310,7 @@ menu {
 .share-join img {
   display: inline-block;
   margin-right: 15px;
+  cursor: pointer;
 }
 .share-join-show {
   opacity: 1;
