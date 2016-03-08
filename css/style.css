@@ -221,9 +221,15 @@ menu {
   position: absolute;
   top: 50px;
   right: 5%;
-  width: 600px;
+  width: 400px;
   height: 100px;
   background: url("../img/line.png") 50% 50% repeat-x;
+  opacity: 0;
+  -webkit-transition: all 1s linear;
+  -moz-transition: all 1s linear;
+  -o-transition: all 1s linear;
+  -ms-transition: all 1s linear;
+  transition: all 1s linear;
 }
 .nav-line .nav-item {
   position: relative;
@@ -235,14 +241,20 @@ menu {
 .nav-line .nav-item img {
   position: absolute;
   left: -10px;
-  top: 5px;
-  height: 20px;
+  top: 9px;
+  height: 18px;
 }
 .nav-line .nav-item .nav-hover {
   left: -5px;
   top: 61px;
   height: 8px;
   width: 24px;
+  opacity: 0;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 .nav-line .nav-index {
   left: 5%;
@@ -268,6 +280,40 @@ menu {
   width: 15px;
   height: 15px;
   background-color: #fff;
+}
+.nav-line .nav-index:hover > img {
+  opacity: 1;
+}
+.nav-line .nav-timeline:hover > img {
+  opacity: 1;
+}
+.nav-line .nav-contact:hover > img {
+  opacity: 1;
+}
+.nav-line-change {
+  width: 600px;
+  opacity: 1;
+}
+.share-join {
+  position: absolute;
+  left: 100px;
+  bottom: 0px;
+  width: 300px;
+  height: 80px;
+  opacity: 0;
+  -webkit-transition: all 1s linear;
+  -moz-transition: all 1s linear;
+  -o-transition: all 1s linear;
+  -ms-transition: all 1s linear;
+  transition: all 1s linear;
+}
+.share-join img {
+  display: inline-block;
+  margin-right: 15px;
+  cursor: pointer;
+}
+.share-join-show {
+  opacity: 1;
 }
 /*ripple动画*/
 @keyframes ripple {

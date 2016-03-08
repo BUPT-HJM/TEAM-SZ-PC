@@ -167,9 +167,11 @@ html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,tab
 	position: absolute;
 	top:  50px;
 	right: 5%;
-	width: 600px;
+	width: 400px;
 	height: 100px;
 	background: url("../img/line.png") 50% 50% repeat-x;
+	opacity: 0;
+	.transition(all,1s,linear);
 	& .nav-item {
 		position: relative;
 		width: 100px;
@@ -179,14 +181,16 @@ html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,tab
 		& img {
 			position: absolute;
 			left: -10px;
-			top: 5px;
-			height: 20px;
+			top: 9px;
+			height: 18px;
 		}
 		& .nav-hover {
 			left: -5px;
 			top: 61px;
 			height: 8px;
 			width: 24px;
+			opacity: 0;
+			.transition(all,0.2s,linear);
 		}
 	}
 	& .nav-index {
@@ -210,7 +214,42 @@ html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,tab
 		height: @nav-circle-width;
 		background-color: #fff;
 	}
+	& .nav-index:hover>img{
+		opacity: 1;
+	}
+	& .nav-timeline:hover>img{
+		opacity: 1;
+	}
+	& .nav-contact:hover>img{
+		opacity: 1;
+	}
 }
+//进入首页后的右上角菜单
+.nav-line-change {
+	width: 600px;
+	opacity: 1;
+}
+
+//左下角微博分享和加入我们
+.share-join {
+	position: absolute;
+	left: 100px;
+	bottom: 0px;
+	width: 300px;
+	height: 80px;
+	& img {
+		display: inline-block;
+		margin-right: 15px;
+		cursor: pointer;
+	}
+	opacity: 0;
+	.transition;
+}
+//进入首页后的左下角
+.share-join-show {
+	opacity: 1;
+}
+
 /*ripple动画*/
 @keyframes ripple
 {
