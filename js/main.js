@@ -20,4 +20,7 @@ $(function(){
 	function introduction_show(){
 		$(".introduction").addClass(" introduction-show");
 	};
+	$(".nav-item").click(function(){
+		$(".logo-font").addClass(" logo-font-navitem");
+	});
 });
