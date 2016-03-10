@@ -387,4 +387,9 @@ menu {
   -ms-transform: translate(-80%, -120%) scale(0.425, 0.425);
   -o-transform: translate(-80%, -120%) scale(0.425, 0.425);
   transform: translate(-80%, -120%) scale(0.425, 0.425);
+  -webkit-transition: all 1s linear;
+  -moz-transition: all 1s linear;
+  -o-transition: all 1s linear;
+  -ms-transition: all 1s linear;
+  transition: all 1s linear;
 }
