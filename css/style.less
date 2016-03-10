@@ -316,9 +316,19 @@ html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,tab
     box-shadow: 0 0 0 10px rgba(255,255,255, 0.1), 0 0 0 20px rgba(255,255,255, 0.1), 0 0 0 30px rgba(255,255,255, 0.1), 0 0 0 40px rgba(255,255,255, 0);
   }
 }
+//click nav-item
+.introduction-hide{
+	opacity:0;
+}
 .logo-font-navitem{
 	opacity:0;
 }
-
+@nav-item-click-scale:0.425;
+.logo-contact {
+  -webkit-transform: translate(-80%,-120%) scale(@nav-item-click-scale, @nav-item-click-scale);
+  -ms-transform: translate(-80%,-120%) scale(@nav-item-click-scale, @nav-item-click-scale);
+  -o-transform: translate(-80%,-120%) scale(@nav-item-click-scale, @nav-item-click-scale);
+  transform: translate(-80%,-120%) scale(@nav-item-click-scale, @nav-item-click-scale);
+}
 
 
