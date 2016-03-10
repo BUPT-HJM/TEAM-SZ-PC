@@ -22,5 +22,7 @@ $(function(){
 	};
 	$(".nav-item").click(function(){
 		$(".logo-font").addClass(" logo-font-navitem");
+		$(".logo").addClass(" logo-contact");
+		$(".introduction").addClass(" introduction-hide");
 	});
 });
