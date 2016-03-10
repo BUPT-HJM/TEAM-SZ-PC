@@ -69,14 +69,14 @@ html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,tab
 	width: 50%;
 	margin: 0 auto;
 	text-align: center;
-	.transition(all,2s,ease-in-out);
+	.transition(all,1.5s,ease-in-out);
 	.logo-img {
 		position: relative;
 		display: block;
 		width: @logo-img-width;
 		height: @logo-img-width;
 		margin: 0 auto;
-		.transition(all,2s,ease-in-out);
+		.transition(all,1.5s,ease-in-out);
 	}
 	.logo-font {
 		position: relative;
@@ -106,7 +106,7 @@ html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,tab
 	cursor: pointer;
 	.border-radius(@welcome-circle-width);
 	.animation(ripple,1s,linear,0s,infinite,normal);
-	.transition(all,2s,ease-in-out);
+	.transition(all,1.5s,ease-in-out);
 	& img {
 		.transition(all,0.8s,ease);
 		opacity: 0;
@@ -148,6 +148,7 @@ html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,tab
 }
 //welcome-circle进入首页，变动
 .welcome-circle-change {
+	z-index: 999;
 	left: 95%;
 	top: @welcome-circle-change-top;
 }
@@ -261,21 +262,21 @@ html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,tab
 	color: #ad956c;
 	opacity: 0;
 	//旋转效果
-	-webkit-transform: perspective(200px) rotateX(180deg);
+	/*-webkit-transform: perspective(200px) rotateX(180deg);
 	-ms-transform: perspective(200px) rotateX(180deg);
 	-o-transform: perspective(200px) rotateX(180deg);
 	transform: perspective(200px) rotateX(180deg);
-	transform-origin: top center;
-	.transition(all,2s,ease-in-out);
+	transform-origin: top center;*/
+	.transition(all,1s,ease-in-out);
 }
 //进入首页团队介绍变动旋转的效果
 .introduction-show {
 	opacity: 1;
 	//进入首页团队介绍变动旋转的效果
-	-webkit-transform: perspective(800px) rotateX(0deg);
+	/*-webkit-transform: perspective(800px) rotateX(0deg);
 	-ms-transform: perspective(800px) rotateX(0deg);
 	-o-transform: perspective(800px) rotateX(0deg);
-	transform: perspective(800px) rotateX(0deg);
+	transform: perspective(800px) rotateX(0deg);*/
 }
 
 
@@ -316,6 +317,5 @@ html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,tab
     box-shadow: 0 0 0 10px rgba(255,255,255, 0.1), 0 0 0 20px rgba(255,255,255, 0.1), 0 0 0 30px rgba(255,255,255, 0.1), 0 0 0 40px rgba(255,255,255, 0);
   }
 }
-
 
 

@@ -70,11 +70,11 @@ menu {
   width: 50%;
   margin: 0 auto;
   text-align: center;
-  -webkit-transition: all 2s ease-in-out;
-  -moz-transition: all 2s ease-in-out;
-  -o-transition: all 2s ease-in-out;
-  -ms-transition: all 2s ease-in-out;
-  transition: all 2s ease-in-out;
+  -webkit-transition: all 1.5s ease-in-out;
+  -moz-transition: all 1.5s ease-in-out;
+  -o-transition: all 1.5s ease-in-out;
+  -ms-transition: all 1.5s ease-in-out;
+  transition: all 1.5s ease-in-out;
 }
 .logo .logo-img {
   position: relative;
@@ -82,11 +82,11 @@ menu {
   width: 200px;
   height: 200px;
   margin: 0 auto;
-  -webkit-transition: all 2s ease-in-out;
-  -moz-transition: all 2s ease-in-out;
-  -o-transition: all 2s ease-in-out;
-  -ms-transition: all 2s ease-in-out;
-  transition: all 2s ease-in-out;
+  -webkit-transition: all 1.5s ease-in-out;
+  -moz-transition: all 1.5s ease-in-out;
+  -o-transition: all 1.5s ease-in-out;
+  -ms-transition: all 1.5s ease-in-out;
+  transition: all 1.5s ease-in-out;
 }
 .logo .logo-font {
   position: relative;
@@ -122,11 +122,11 @@ menu {
   -webkit-animation: ripple 1s linear 0s infinite normal;
   /* Opera: */
   -o-animation: ripple 1s linear 0s infinite normal;
-  -webkit-transition: all 2s ease-in-out;
-  -moz-transition: all 2s ease-in-out;
-  -o-transition: all 2s ease-in-out;
-  -ms-transition: all 2s ease-in-out;
-  transition: all 2s ease-in-out;
+  -webkit-transition: all 1.5s ease-in-out;
+  -moz-transition: all 1.5s ease-in-out;
+  -o-transition: all 1.5s ease-in-out;
+  -ms-transition: all 1.5s ease-in-out;
+  transition: all 1.5s ease-in-out;
 }
 .welcome-circle img {
   -webkit-transition: all 0.8s ease;
@@ -205,6 +205,7 @@ menu {
   transform: translate(-50%, -50%) scale(1.5, 1.5);
 }
 .welcome-circle-change {
+  z-index: 999;
   left: 95%;
   top: 100px;
 }
@@ -325,23 +326,23 @@ menu {
   padding: 20px;
   color: #ad956c;
   opacity: 0;
-  -webkit-transform: perspective(200px) rotateX(180deg);
-  -ms-transform: perspective(200px) rotateX(180deg);
-  -o-transform: perspective(200px) rotateX(180deg);
-  transform: perspective(200px) rotateX(180deg);
-  transform-origin: top center;
-  -webkit-transition: all 2s ease-in-out;
-  -moz-transition: all 2s ease-in-out;
-  -o-transition: all 2s ease-in-out;
-  -ms-transition: all 2s ease-in-out;
-  transition: all 2s ease-in-out;
+  /*-webkit-transform: perspective(200px) rotateX(180deg);
+	-ms-transform: perspective(200px) rotateX(180deg);
+	-o-transform: perspective(200px) rotateX(180deg);
+	transform: perspective(200px) rotateX(180deg);
+	transform-origin: top center;*/
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 .introduction-show {
   opacity: 1;
-  -webkit-transform: perspective(800px) rotateX(0deg);
-  -ms-transform: perspective(800px) rotateX(0deg);
-  -o-transform: perspective(800px) rotateX(0deg);
-  transform: perspective(800px) rotateX(0deg);
+  /*-webkit-transform: perspective(800px) rotateX(0deg);
+	-ms-transform: perspective(800px) rotateX(0deg);
+	-o-transform: perspective(800px) rotateX(0deg);
+	transform: perspective(800px) rotateX(0deg);*/
 }
 /*ripple动画*/
 @keyframes ripple {
