@@ -35,3 +35,4 @@ $(function(){
         $(".logo").addClass(" logo-contact");
         $(".introduction").addClass(" introduction-hide");
     });
+});
