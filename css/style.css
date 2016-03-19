@@ -327,10 +327,10 @@ menu {
   color: #ad956c;
   opacity: 0;
   /*-webkit-transform: perspective(200px) rotateX(180deg);
-	-ms-transform: perspective(200px) rotateX(180deg);
-	-o-transform: perspective(200px) rotateX(180deg);
-	transform: perspective(200px) rotateX(180deg);
-	transform-origin: top center;*/
+    -ms-transform: perspective(200px) rotateX(180deg);
+    -o-transform: perspective(200px) rotateX(180deg);
+    transform: perspective(200px) rotateX(180deg);
+    transform-origin: top center;*/
   -webkit-transition: all 1s ease-in-out;
   -moz-transition: all 1s ease-in-out;
   -o-transition: all 1s ease-in-out;
@@ -340,9 +340,9 @@ menu {
 .introduction-show {
   opacity: 1;
   /*-webkit-transform: perspective(800px) rotateX(0deg);
-	-ms-transform: perspective(800px) rotateX(0deg);
-	-o-transform: perspective(800px) rotateX(0deg);
-	transform: perspective(800px) rotateX(0deg);*/
+    -ms-transform: perspective(800px) rotateX(0deg);
+    -o-transform: perspective(800px) rotateX(0deg);
+    transform: perspective(800px) rotateX(0deg);*/
 }
 /*ripple动画*/
 @keyframes ripple {
@@ -393,4 +393,7 @@ menu {
   -o-transition: all 1s linear;
   -ms-transition: all 1s linear;
   transition: all 1s linear;
+}
+.snow-hide {
+  opacity: 0;
 }
