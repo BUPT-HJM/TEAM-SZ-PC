@@ -324,12 +324,17 @@ html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,tab
 .logo-font-navitem{
     opacity:0;
 }
-@nav-item-click-scale:0.425;
+
+@logo-small-scale: 0.5;
 .logo-contact {
-  -webkit-transform: translate(-80%,-120%) scale(@nav-item-click-scale, @nav-item-click-scale);
-  -ms-transform: translate(-80%,-120%) scale(@nav-item-click-scale, @nav-item-click-scale);
-  -o-transform: translate(-80%,-120%) scale(@nav-item-click-scale, @nav-item-click-scale);
-  transform: translate(-80%,-120%) scale(@nav-item-click-scale, @nav-item-click-scale);
+    left: 0;
+    top: -30px;
+    -webkit-transform: rotate(0deg) scale(@logo-small-scale,@logo-small-scale);
+    -ms-transform: rotate(0deg) scale(@logo-small-scale,@logo-small-scale);
+    -o-transform: rotate(0deg) scale(@logo-small-scale,@logo-small-scale);
+    transform: rotate(0deg) scale(@logo-small-scale,@logo-small-scale);
+    //上面为重置
+    width: 200px;
   .transition(all,1s,linear);
 }
 .snow-hide {
