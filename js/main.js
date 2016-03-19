@@ -37,9 +37,28 @@ $(function(){
     /*
     菜单导航点击效果
      */
-    $(".nav-item").click(function(){
+    $(".nav-timeline").click(function(){
         $(".logo-font").addClass(" logo-font-navitem");
         $(".logo").addClass(" logo-contact");
         $(".introduction").addClass(" introduction-hide");
+        $(this).find("img").addClass("nav-under-line-show")
+        $(this).siblings().find(".nav-hover").removeClass("nav-under-line-show");
+        $(".timeline").addClass("timeline-change");
+    });
+    $(".nav-contact").click(function(){
+        $(".logo-font").addClass(" logo-font-navitem");
+        $(".logo").addClass(" logo-contact");
+        $(".introduction").addClass(" introduction-hide");
+        $(this).find("img").addClass("nav-under-line-show")
+        $(this).siblings().find(".nav-hover").removeClass("nav-under-line-show");
+        $(".timeline").removeClass("timeline-change");
+    });
+    $(".nav-index").click(function(){
+        $(".logo-font").removeClass(" logo-font-navitem");
+        $(".logo").removeClass(" logo-contact");
+        $(".introduction").removeClass(" introduction-hide");
+        $(this).find("img").addClass("nav-under-line-show")
+        $(this).siblings().find(".nav-hover").removeClass("nav-under-line-show");
+        $(".timeline").removeClass("timeline-change");
     });
 });
