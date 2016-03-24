@@ -235,11 +235,11 @@ menu {
   height: 100px;
   background: url("../img/line.png") 50% 50% repeat-x;
   opacity: 0;
-  -webkit-transition: all 1s linear;
-  -moz-transition: all 1s linear;
-  -o-transition: all 1s linear;
-  -ms-transition: all 1s linear;
-  transition: all 1s linear;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  -ms-transition: all 0.5s linear;
+  transition: all 0.5s linear;
 }
 .nav-line .nav-item {
   position: relative;
