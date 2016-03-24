@@ -49,11 +49,11 @@ menu {
   width: 100%;
   height: 100%;
   z-index: -1;
-  -webkit-transition: all 0.5s linear;
-  -moz-transition: all 0.5s linear;
-  -o-transition: all 0.5s linear;
-  -ms-transition: all 0.5s linear;
-  transition: all 0.5s linear;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 #bg-2 {
   z-index: -2;
@@ -77,11 +77,11 @@ menu {
   width: 50%;
   margin: 0 auto;
   text-align: center;
-  -webkit-transition: all 1.5s ease-in-out;
-  -moz-transition: all 1.5s ease-in-out;
-  -o-transition: all 1.5s ease-in-out;
-  -ms-transition: all 1.5s ease-in-out;
-  transition: all 1.5s ease-in-out;
+  -webkit-transition: all 0.8s ease-in-out;
+  -moz-transition: all 0.8s ease-in-out;
+  -o-transition: all 0.8s ease-in-out;
+  -ms-transition: all 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out;
 }
 .logo .logo-img {
   position: relative;
@@ -89,20 +89,20 @@ menu {
   width: 200px;
   height: 200px;
   margin: 0 auto;
-  -webkit-transition: all 1.5s ease-in-out;
-  -moz-transition: all 1.5s ease-in-out;
-  -o-transition: all 1.5s ease-in-out;
-  -ms-transition: all 1.5s ease-in-out;
-  transition: all 1.5s ease-in-out;
+  -webkit-transition: all 0.8s ease-in-out;
+  -moz-transition: all 0.8s ease-in-out;
+  -o-transition: all 0.8s ease-in-out;
+  -ms-transition: all 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out;
 }
 .logo .logo-font {
   position: relative;
   left: 0;
-  -webkit-transition: all 0.5s linear;
-  -moz-transition: all 0.5s linear;
-  -o-transition: all 0.5s linear;
-  -ms-transition: all 0.5s linear;
-  transition: all 0.5s linear;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 .welcome-circle {
   position: absolute;
@@ -130,18 +130,18 @@ menu {
   -webkit-animation: ripple 1s linear 0s infinite normal;
   /* Opera: */
   -o-animation: ripple 1s linear 0s infinite normal;
-  -webkit-transition: all 1.5s ease-in-out;
-  -moz-transition: all 1.5s ease-in-out;
-  -o-transition: all 1.5s ease-in-out;
-  -ms-transition: all 1.5s ease-in-out;
-  transition: all 1.5s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 .welcome-circle img {
-  -webkit-transition: all 0.8s ease;
-  -moz-transition: all 0.8s ease;
-  -o-transition: all 0.8s ease;
-  -ms-transition: all 0.8s ease;
-  transition: all 0.8s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
   opacity: 0;
   position: absolute;
   left: 50%;
@@ -314,11 +314,11 @@ menu {
   width: 300px;
   height: 80px;
   opacity: 0;
-  -webkit-transition: all 0.5s linear;
-  -moz-transition: all 0.5s linear;
-  -o-transition: all 0.5s linear;
-  -ms-transition: all 0.5s linear;
-  transition: all 0.5s linear;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 .share-join img {
   display: inline-block;
@@ -392,7 +392,7 @@ menu {
 .introduction-hide {
   opacity: 0;
 }
-.logo-font-navitem {
+.logo-font-change-second {
   opacity: 0;
 }
 .logo-contact {
@@ -437,9 +437,36 @@ menu {
   -o-border-radius: 20px;
   border-radius: 20px;
   background-color: #ae956b;
+  cursor: pointer;
 }
 .timeline .timeline-end {
   right: 0;
+}
+.timeline .timeline-front:hover {
+  width: 0;
+  height: 0;
+  background-color: transparent;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 20px solid #ae956b;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -o-border-radius: 0px;
+  border-radius: 0px;
+}
+.timeline .timeline-end:hover {
+  width: 0;
+  height: 0;
+  background-color: transparent;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 20px solid #ae956b;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -o-border-radius: 0px;
+  border-radius: 0px;
 }
 .timeline .timeline-item {
   position: relative;
@@ -460,11 +487,11 @@ menu {
   text-align: center;
   font-size: 20px;
   cursor: pointer;
-  -webkit-transition: all 0.5s linear;
-  -moz-transition: all 0.5s linear;
-  -o-transition: all 0.5s linear;
-  -ms-transition: all 0.5s linear;
-  transition: all 0.5s linear;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 .timeline .timeline-item .timeline-item-line {
   position: absolute;
@@ -474,11 +501,11 @@ menu {
   height: 0;
   background: url("../img/timeline-item-line.png") 50% 50% repeat-y;
   opacity: 0;
-  -webkit-transition: all 0.5s linear;
-  -moz-transition: all 0.5s linear;
-  -o-transition: all 0.5s linear;
-  -ms-transition: all 0.5s linear;
-  transition: all 0.5s linear;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 .timeline .timeline-item .timeline-item-img {
   position: absolute;
@@ -494,11 +521,11 @@ menu {
   border: 1px solid #ae956b;
   background-color: #000;
   opacity: 0;
-  -webkit-transition: all 0.5s linear;
-  -moz-transition: all 0.5s linear;
-  -o-transition: all 0.5s linear;
-  -ms-transition: all 0.5s linear;
-  transition: all 0.5s linear;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 .timeline .timeline-item:hover {
   top: 70px;
@@ -526,5 +553,155 @@ menu {
 }
 .timeline-change {
   left: 200px;
+  opacity: 1;
+}
+.contact {
+  position: absolute;
+  top: 200px;
+  left: -500px;
+  width: 630px;
+  height: 600px;
+  opacity: 0;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+.contact .contact-item {
+  position: relative;
+  margin-top: 20px;
+}
+.contact .contact-item .contact-line {
+  width: 500px;
+  height: 80px;
+  background: url("../img/timeline-line.png") 50% 50% repeat-x;
+}
+.contact .contact-item .contact-line .contact-line-small-circle {
+  position: absolute;
+  top: 25px;
+  left: 2.5px;
+  width: 30px;
+  height: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  border-radius: 30px;
+  background: #ae956b;
+}
+.contact .contact-item .contact-line .contact-line-big-circle {
+  position: absolute;
+  top: 22px;
+  width: 34px;
+  height: 34px;
+  -webkit-border-radius: 34px;
+  -moz-border-radius: 34px;
+  -ms-border-radius: 34px;
+  -o-border-radius: 34px;
+  border-radius: 34px;
+  border: 1px solid #ae956b;
+}
+.contact .contact-item .contact-circle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80px;
+  height: 80px;
+  -webkit-border-radius: 80px;
+  -moz-border-radius: 80px;
+  -ms-border-radius: 80px;
+  -o-border-radius: 80px;
+  border-radius: 80px;
+  border: 1px solid #ae956b;
+}
+.contact .contact-item .contact-line-triangle {
+  position: absolute;
+  left: 500px;
+  top: 34px;
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-right: 12px solid #ae956b;
+}
+.contact-change {
+  left: 200px;
+  opacity: 1;
+}
+.contact-right {
+  position: absolute;
+  top: 200px;
+  left: -500px;
+  width: 630px;
+  height: 600px;
+  opacity: 0;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+.contact-right .contact-item {
+  position: relative;
+  margin-top: 20px;
+}
+.contact-right .contact-item .contact-line {
+  width: 500px;
+  height: 80px;
+  margin-left: 100px;
+  background: url("../img/timeline-line.png") 50% 50% repeat-x;
+}
+.contact-right .contact-item .contact-line .contact-line-small-circle {
+  position: absolute;
+  top: 25px;
+  right: 3px;
+  width: 30px;
+  height: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  border-radius: 30px;
+  background: #ae956b;
+}
+.contact-right .contact-item .contact-line .contact-line-big-circle {
+  position: absolute;
+  top: 22px;
+  right: 0;
+  width: 34px;
+  height: 34px;
+  -webkit-border-radius: 34px;
+  -moz-border-radius: 34px;
+  -ms-border-radius: 34px;
+  -o-border-radius: 34px;
+  border-radius: 34px;
+  border: 1px solid #ae956b;
+}
+.contact-right .contact-item .contact-circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 80px;
+  -webkit-border-radius: 80px;
+  -moz-border-radius: 80px;
+  -ms-border-radius: 80px;
+  -o-border-radius: 80px;
+  border-radius: 80px;
+  border: 1px solid #ae956b;
+}
+.contact-right .contact-item .contact-line-triangle {
+  position: absolute;
+  left: 100px;
+  top: 34px;
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 12px solid #ae956b;
+}
+.contact-right-change {
+  left: 900px;
   opacity: 1;
 }
