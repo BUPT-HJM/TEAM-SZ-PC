@@ -39,7 +39,7 @@ $(function(){
      */
     $(".nav-timeline").click(function(){
         $(".logo-font").addClass("logo-font-change-second");
-        $(".logo").addClass(" logo-contact");
+        $(".logo").addClass(" logo-top-left");
         $(".introduction").addClass(" introduction-hide");
         $(this).find("img").addClass("nav-under-line-show")
         $(this).siblings().find(".nav-hover").removeClass("nav-under-line-show");
@@ -49,7 +49,7 @@ $(function(){
     });
     $(".nav-contact").click(function(){
         $(".logo-font").addClass("logo-font-change-second");
-        $(".logo").addClass(" logo-contact");
+        $(".logo").addClass(" logo-top-left");
         $(".introduction").addClass(" introduction-hide");
         $(this).find("img").addClass("nav-under-line-show")
         $(this).siblings().find(".nav-hover").removeClass("nav-under-line-show");
@@ -59,7 +59,7 @@ $(function(){
     });
     $(".nav-index").click(function(){
         $(".logo-font").removeClass("logo-font-change-second");
-        $(".logo").removeClass(" logo-contact");
+        $(".logo").removeClass(" logo-top-left");
         $(".introduction").removeClass(" introduction-hide");
         $(this).find("img").addClass("nav-under-line-show")
         $(this).siblings().find(".nav-hover").removeClass("nav-under-line-show");
@@ -67,4 +67,18 @@ $(function(){
         $(".contact").removeClass("contact-change");
         $(".contact-right").removeClass("contact-right-change");
     });
+    /*
+    logo点击效果
+     */
+    $("#container").on("click",".logo-top-left",function(){
+        $(".logo-font").removeClass("logo-font-change-second");
+        $(".logo").removeClass(" logo-top-left");
+        $(".introduction").removeClass(" introduction-hide");
+        $(this).find("img").addClass("nav-under-line-show")
+        $(this).siblings().find(".nav-hover").removeClass("nav-under-line-show");
+        $(".timeline").removeClass("timeline-change");
+        $(".contact").removeClass("contact-change");
+        $(".contact-right").removeClass("contact-right-change");
+    });
+
 });

@@ -395,7 +395,7 @@ menu {
 .logo-font-change-second {
   opacity: 0;
 }
-.logo-contact {
+.logo-top-left {
   left: 0;
   top: -30px;
   -webkit-transform: rotate(0deg) scale(0.5, 0.5);
@@ -403,6 +403,7 @@ menu {
   -o-transform: rotate(0deg) scale(0.5, 0.5);
   transform: rotate(0deg) scale(0.5, 0.5);
   width: 200px;
+  cursor: pointer;
   -webkit-transition: all 1s linear;
   -moz-transition: all 1s linear;
   -o-transition: all 1s linear;
