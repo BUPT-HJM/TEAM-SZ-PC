@@ -528,6 +528,18 @@ menu {
   -ms-transition: all 0.3s linear;
   transition: all 0.3s linear;
 }
+.timeline .timeline-item .timeline-item-2016 {
+  position: absolute;
+  top: -25px;
+  left: -1px;
+  opacity: 0;
+}
+.timeline .timeline-item .timeline-item-p-detail {
+  position: absolute;
+  top: 0;
+  left: 8px;
+  opacity: 0;
+}
 .timeline .timeline-item:hover {
   top: 70px;
   width: 60px;
@@ -550,6 +562,9 @@ menu {
   left: -120px;
   width: 300px;
   height: 300px;
+  opacity: 1;
+}
+.timeline .timeline-item:hover > .timeline-item-2016 {
   opacity: 1;
 }
 .timeline-change {

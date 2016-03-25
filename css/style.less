@@ -443,6 +443,20 @@ html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,tab
             opacity: 0;
             .transition();
         }
+        & .timeline-item-2016 {
+            position: absolute;
+            top: -25px;
+            left: -1px;
+            opacity: 0;
+        }
+        & .timeline-item-p {
+        }
+        & .timeline-item-p-detail {
+            position: absolute;
+            top: 0;
+            left: 8px;
+            opacity: 0;
+        }
     }
     & .timeline-item:hover {
         top: @timeline-height/2-@timeline-big-item-width/2;
@@ -462,6 +476,9 @@ html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,tab
         left: -@timeline-item-img-width/2+@timeline-big-item-width/2;
         width: @timeline-item-img-width;
         height: @timeline-item-img-width;
+        opacity: 1;
+    }
+    & .timeline-item:hover > .timeline-item-2016 {
         opacity: 1;
     }
 }
