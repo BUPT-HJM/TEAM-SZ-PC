@@ -73,7 +73,7 @@ menu {
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  top: 320px;
+  top: 40%;
   width: 50%;
   margin: 0 auto;
   text-align: center;
@@ -112,7 +112,7 @@ menu {
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  top: 620px;
+  top: 75%;
   width: 80px;
   height: 80px;
   border: #fff solid 2px;
@@ -331,7 +331,7 @@ menu {
 .introduction {
   position: absolute;
   left: 200px;
-  top: 400px;
+  top: 50%;
   width: 800px;
   height: 100px;
   padding: 20px;
@@ -398,10 +398,10 @@ menu {
 .logo-top-left {
   left: 0;
   top: -30px;
-  -webkit-transform: rotate(0deg) scale(0.5, 0.5);
-  -ms-transform: rotate(0deg) scale(0.5, 0.5);
-  -o-transform: rotate(0deg) scale(0.5, 0.5);
-  transform: rotate(0deg) scale(0.5, 0.5);
+  -webkit-transform: rotate(0deg) scale(0.4, 0.4);
+  -ms-transform: rotate(0deg) scale(0.4, 0.4);
+  -o-transform: rotate(0deg) scale(0.4, 0.4);
+  transform: rotate(0deg) scale(0.4, 0.4);
   width: 200px;
   cursor: pointer;
   -webkit-transition: all 1s linear;
