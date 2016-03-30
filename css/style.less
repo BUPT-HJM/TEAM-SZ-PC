@@ -491,16 +491,17 @@ html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,tab
 }
 
 //联系我们
-@contact-line-width: 500px;
-@contact-circle-width: 80px;
-@contact-line-small-circle: 30px;
-@contact-line-big-circle: 34px;
+@contact-width: 450px;
+@contact-line-width: 390px;
+@contact-circle-width: 40px;
+@contact-line-small-circle: 20px;
+@contact-line-big-circle: 24px;
 @contact-triangle-border: 6px;
 .contact {
     position: absolute;
     top: 200px;
     left: -500px;
-    width: 630px;
+    width: @contact-width;
     height: 600px;
     opacity: 0;
     .transition(all,1s,ease-in-out);
@@ -537,7 +538,205 @@ html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,tab
             height: @contact-circle-width;
             .border-radius(@contact-circle-width);
             border: 1px solid #ae956b;
-            font-size: 50px;
+            font-size: 25px;
+            line-height: @contact-circle-width;
+            text-align: center;
+            color: rgb(174, 149, 107);
+            cursor: pointer;
+            z-index: 999;
+            .transition();
+        }
+        & .contact-circle ~ .contact-line {
+            opacity: 0;
+        }
+        & .contact-circle:hover ~ .contact-line {
+            opacity: 1;
+        }
+        & .contact-circle-change {
+            left: 0;
+            color: rgb(0,0,0);
+            background: rgb(174, 149, 107);
+        }
+        & .contact-circle-change:hover ~ .contact-line {
+            opacity: 0;
+        }
+        & .contact-line-triangle {
+            position: absolute;
+            left: @contact-line-width;
+            top: @contact-circle-width/2-@contact-triangle-border;
+            width: 0;
+            height: 0;
+            border-top: @contact-triangle-border solid transparent;
+            border-bottom: @contact-triangle-border solid transparent;
+            border-right: @contact-triangle-border*2 solid #ae956b;
+        }
+        & .contact-email {
+            position: absolute;
+            top: 10px;
+            width: 100%;
+            height: 100%;
+            font-size: 20px;
+            text-align: center;
+            color: #ae956b;
+            opacity: 0;
+            .transition();
+        }
+        & .contact-email-change {
+            opacity: 1;
+        }
+    }
+}
+.contact-change {
+    left: 200px;
+    opacity: 1;
+}
+.contact-right {
+    position: absolute;
+    top: 200px;
+    left: -500px;
+    width: @contact-width;
+    height: 600px;
+    opacity: 0;
+    .transition(all,1s,ease-in-out);
+    & .contact-item {
+        position: relative;
+        margin-top: 20px;
+        & .contact-line {
+            margin-left: @contact-circle-width+15;
+            width: @contact-line-width;
+            height: @contact-circle-width;
+            background: url("../img/timeline-line.png") 50% 50% repeat-x;
+            & .contact-line-small-circle {
+                position: absolute;
+                top: @contact-circle-width*0.5-0.5*@contact-line-small-circle;
+                right: 3px;
+                width: @contact-line-small-circle;
+                height: @contact-line-small-circle;
+                .border-radius(@contact-line-small-circle);
+                background: #ae956b;
+            }
+            & .contact-line-big-circle {
+                position: absolute;
+                top: (@contact-circle-width*1-1*@contact-line-big-circle*1-2)/2;
+                right: 0;
+                width: @contact-line-big-circle;
+                height: @contact-line-big-circle;
+                .border-radius(@contact-line-big-circle);
+                border: 1px solid #ae956b;
+            }
+            & .contact-line-triangle {
+                position: absolute;
+                left: @contact-circle-width+15;
+                top: @contact-circle-width/2-@contact-triangle-border;
+                width: 0;
+                height: 0;
+                border-top: @contact-triangle-border solid transparent;
+                border-bottom: @contact-triangle-border solid transparent;
+                border-left: @contact-triangle-border*2 solid #ae956b;
+            }
+        }
+        & .contact-circle {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: @contact-circle-width;
+            height: @contact-circle-width;
+            .border-radius(@contact-circle-width);
+            border: 1px solid #ae956b;
+            font-size: 25px;
+            line-height: @contact-circle-width;
+            text-align: center;
+            color: rgb(174, 149, 107);
+            cursor: pointer;
+            z-index: 999;
+            .transition();
+        }
+        & .contact-circle ~ .contact-line {
+            opacity: 0;
+        }
+        & .contact-circle:hover ~ .contact-line {
+            opacity: 1;
+        }
+        & .contact-circle-change {
+            left: 0;
+            color: rgb(0,0,0);
+            background: rgb(174, 149, 107);
+        }
+        & .contact-circle-change:hover ~ .contact-line {
+            opacity: 0;
+        }
+        & .contact-email {
+            position: absolute;
+            top: 10px;
+            width: 100%;
+            height: 100%;
+            font-size: 20px;
+            text-align: center;
+            color: #ae956b;
+            opacity: 0;
+            .transition();
+        }
+        & .contact-email-change {
+            opacity: 1;
+        }
+    }
+}
+.contact-right-change {
+    left: 700px;
+    opacity: 1;
+}
+
+
+@media (min-height: 800px) {
+//联系我们
+@contact-width: 600px;
+@contact-line-width: 500px;
+@contact-circle-width: 62px;
+@contact-line-small-circle: 30px;
+@contact-line-big-circle: 34px;
+@contact-triangle-border: 6px;
+.contact {
+    position: absolute;
+    top: 200px;
+    left: -500px;
+    width: @contact-width;
+    height: 600px;
+    opacity: 0;
+    .transition(all,1s,ease-in-out);
+    & .contact-item {
+        position: relative;
+        margin-top: 20px;
+        & .contact-line {
+            width: @contact-line-width;
+            height: @contact-circle-width;
+            background: url("../img/timeline-line.png") 50% 50% repeat-x;
+            & .contact-line-small-circle {
+                position: absolute;
+                top: @contact-circle-width*0.5-0.5*@contact-line-small-circle;
+                left: 2.5px;
+                width: @contact-line-small-circle;
+                height: @contact-line-small-circle;
+                .border-radius(@contact-line-small-circle);
+                background: #ae956b;
+            }
+            & .contact-line-big-circle {
+                position: absolute;
+                top: (@contact-circle-width*1-1*@contact-line-big-circle*1-2)/2;
+                width: @contact-line-big-circle;
+                height: @contact-line-big-circle;
+                .border-radius(@contact-line-big-circle);
+                border: 1px solid #ae956b;
+                }
+        }
+        & .contact-circle {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: @contact-circle-width;
+            height: @contact-circle-width;
+            .border-radius(@contact-circle-width);
+            border: 1px solid #ae956b;
+            font-size: 40px;
             line-height: @contact-circle-width;
             text-align: center;
             color: rgb(174, 149, 107);
@@ -574,7 +773,7 @@ html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,tab
             top: 20px;
             width: 100%;
             height: 100%;
-            font-size: 30px;
+            font-size: 20px;
             text-align: center;
             color: #ae956b;
             opacity: 0;
@@ -593,7 +792,7 @@ html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,tab
     position: absolute;
     top: 200px;
     left: -500px;
-    width: 630px;
+    width: @contact-width;
     height: 600px;
     opacity: 0;
     .transition(all,1s,ease-in-out);
@@ -601,9 +800,9 @@ html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,tab
         position: relative;
         margin-top: 20px;
         & .contact-line {
+            margin-left: @contact-circle-width+15;
             width: @contact-line-width;
             height: @contact-circle-width;
-            margin-left: 100px;
             background: url("../img/timeline-line.png") 50% 50% repeat-x;
             & .contact-line-small-circle {
                 position: absolute;
@@ -622,7 +821,17 @@ html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,tab
                 height: @contact-line-big-circle;
                 .border-radius(@contact-line-big-circle);
                 border: 1px solid #ae956b;
-                }
+            }
+            & .contact-line-triangle {
+                position: absolute;
+                left: @contact-circle-width+15;
+                top: @contact-circle-width/2-@contact-triangle-border;
+                width: 0;
+                height: 0;
+                border-top: @contact-triangle-border solid transparent;
+                border-bottom: @contact-triangle-border solid transparent;
+                border-left: @contact-triangle-border*2 solid #ae956b;
+            }
         }
         & .contact-circle {
             position: absolute;
@@ -632,20 +841,46 @@ html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,tab
             height: @contact-circle-width;
             .border-radius(@contact-circle-width);
             border: 1px solid #ae956b;
+            font-size: 40px;
+            line-height: @contact-circle-width;
+            text-align: center;
+            color: rgb(174, 149, 107);
+            cursor: pointer;
+            z-index: 999;
+            .transition();
         }
-        & .contact-line-triangle {
+        & .contact-circle ~ .contact-line {
+            opacity: 0;
+        }
+        & .contact-circle:hover ~ .contact-line {
+            opacity: 1;
+        }
+        & .contact-circle-change {
+            left: 0;
+            color: rgb(0,0,0);
+            background: rgb(174, 149, 107);
+        }
+        & .contact-circle-change:hover ~ .contact-line {
+            opacity: 0;
+        }
+        & .contact-email {
             position: absolute;
-            left: 100px;
-            top: @contact-circle-width/2-@contact-triangle-border;
-            width: 0;
-            height: 0;
-            border-top: @contact-triangle-border solid transparent;
-            border-bottom: @contact-triangle-border solid transparent;
-            border-left: @contact-triangle-border*2 solid #ae956b;
+            top: 20px;
+            width: 100%;
+            height: 100%;
+            font-size: 20px;
+            text-align: center;
+            color: #ae956b;
+            opacity: 0;
+            .transition();
+        }
+        & .contact-email-change {
+            opacity: 1;
         }
     }
 }
 .contact-right-change {
     left: 900px;
     opacity: 1;
+}
 }

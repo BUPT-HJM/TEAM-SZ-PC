@@ -575,7 +575,7 @@ menu {
   position: absolute;
   top: 200px;
   left: -500px;
-  width: 630px;
+  width: 450px;
   height: 600px;
   opacity: 0;
   -webkit-transition: all 1s ease-in-out;
@@ -589,49 +589,49 @@ menu {
   margin-top: 20px;
 }
 .contact .contact-item .contact-line {
-  width: 500px;
-  height: 80px;
+  width: 390px;
+  height: 40px;
   background: url("../img/timeline-line.png") 50% 50% repeat-x;
 }
 .contact .contact-item .contact-line .contact-line-small-circle {
   position: absolute;
-  top: 25px;
+  top: 10px;
   left: 2.5px;
-  width: 30px;
-  height: 30px;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  -ms-border-radius: 30px;
-  -o-border-radius: 30px;
-  border-radius: 30px;
+  width: 20px;
+  height: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
   background: #ae956b;
 }
 .contact .contact-item .contact-line .contact-line-big-circle {
   position: absolute;
-  top: 22px;
-  width: 34px;
-  height: 34px;
-  -webkit-border-radius: 34px;
-  -moz-border-radius: 34px;
-  -ms-border-radius: 34px;
-  -o-border-radius: 34px;
-  border-radius: 34px;
+  top: 7px;
+  width: 24px;
+  height: 24px;
+  -webkit-border-radius: 24px;
+  -moz-border-radius: 24px;
+  -ms-border-radius: 24px;
+  -o-border-radius: 24px;
+  border-radius: 24px;
   border: 1px solid #ae956b;
 }
 .contact .contact-item .contact-circle {
   position: absolute;
   top: 0;
   right: 0;
-  width: 80px;
-  height: 80px;
-  -webkit-border-radius: 80px;
-  -moz-border-radius: 80px;
-  -ms-border-radius: 80px;
-  -o-border-radius: 80px;
-  border-radius: 80px;
+  width: 40px;
+  height: 40px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  -o-border-radius: 40px;
+  border-radius: 40px;
   border: 1px solid #ae956b;
-  font-size: 50px;
-  line-height: 80px;
+  font-size: 25px;
+  line-height: 40px;
   text-align: center;
   color: #ae956b;
   cursor: pointer;
@@ -658,8 +658,8 @@ menu {
 }
 .contact .contact-item .contact-line-triangle {
   position: absolute;
-  left: 500px;
-  top: 34px;
+  left: 390px;
+  top: 14px;
   width: 0;
   height: 0;
   border-top: 6px solid transparent;
@@ -668,10 +668,10 @@ menu {
 }
 .contact .contact-item .contact-email {
   position: absolute;
-  top: 20px;
+  top: 10px;
   width: 100%;
   height: 100%;
-  font-size: 30px;
+  font-size: 20px;
   text-align: center;
   color: #ae956b;
   opacity: 0;
@@ -692,7 +692,7 @@ menu {
   position: absolute;
   top: 200px;
   left: -500px;
-  width: 630px;
+  width: 450px;
   height: 600px;
   opacity: 0;
   -webkit-transition: all 1s ease-in-out;
@@ -706,61 +706,342 @@ menu {
   margin-top: 20px;
 }
 .contact-right .contact-item .contact-line {
-  width: 500px;
-  height: 80px;
-  margin-left: 100px;
+  margin-left: 55px;
+  width: 390px;
+  height: 40px;
   background: url("../img/timeline-line.png") 50% 50% repeat-x;
 }
 .contact-right .contact-item .contact-line .contact-line-small-circle {
   position: absolute;
-  top: 25px;
+  top: 10px;
   right: 3px;
-  width: 30px;
-  height: 30px;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  -ms-border-radius: 30px;
-  -o-border-radius: 30px;
-  border-radius: 30px;
+  width: 20px;
+  height: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
   background: #ae956b;
 }
 .contact-right .contact-item .contact-line .contact-line-big-circle {
   position: absolute;
-  top: 22px;
+  top: 7px;
   right: 0;
-  width: 34px;
-  height: 34px;
-  -webkit-border-radius: 34px;
-  -moz-border-radius: 34px;
-  -ms-border-radius: 34px;
-  -o-border-radius: 34px;
-  border-radius: 34px;
+  width: 24px;
+  height: 24px;
+  -webkit-border-radius: 24px;
+  -moz-border-radius: 24px;
+  -ms-border-radius: 24px;
+  -o-border-radius: 24px;
+  border-radius: 24px;
   border: 1px solid #ae956b;
 }
-.contact-right .contact-item .contact-circle {
+.contact-right .contact-item .contact-line .contact-line-triangle {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 80px;
-  height: 80px;
-  -webkit-border-radius: 80px;
-  -moz-border-radius: 80px;
-  -ms-border-radius: 80px;
-  -o-border-radius: 80px;
-  border-radius: 80px;
-  border: 1px solid #ae956b;
-}
-.contact-right .contact-item .contact-line-triangle {
-  position: absolute;
-  left: 100px;
-  top: 34px;
+  left: 55px;
+  top: 14px;
   width: 0;
   height: 0;
   border-top: 6px solid transparent;
   border-bottom: 6px solid transparent;
   border-left: 12px solid #ae956b;
 }
-.contact-right-change {
-  left: 900px;
+.contact-right .contact-item .contact-circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  -o-border-radius: 40px;
+  border-radius: 40px;
+  border: 1px solid #ae956b;
+  font-size: 25px;
+  line-height: 40px;
+  text-align: center;
+  color: #ae956b;
+  cursor: pointer;
+  z-index: 999;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+.contact-right .contact-item .contact-circle ~ .contact-line {
+  opacity: 0;
+}
+.contact-right .contact-item .contact-circle:hover ~ .contact-line {
   opacity: 1;
+}
+.contact-right .contact-item .contact-circle-change {
+  left: 0;
+  color: #000000;
+  background: #ae956b;
+}
+.contact-right .contact-item .contact-circle-change:hover ~ .contact-line {
+  opacity: 0;
+}
+.contact-right .contact-item .contact-email {
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  text-align: center;
+  color: #ae956b;
+  opacity: 0;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+.contact-right .contact-item .contact-email-change {
+  opacity: 1;
+}
+.contact-right-change {
+  left: 700px;
+  opacity: 1;
+}
+@media (min-height: 800px) {
+  .contact {
+    position: absolute;
+    top: 200px;
+    left: -500px;
+    width: 600px;
+    height: 600px;
+    opacity: 0;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+  }
+  .contact .contact-item {
+    position: relative;
+    margin-top: 20px;
+  }
+  .contact .contact-item .contact-line {
+    width: 500px;
+    height: 62px;
+    background: url("../img/timeline-line.png") 50% 50% repeat-x;
+  }
+  .contact .contact-item .contact-line .contact-line-small-circle {
+    position: absolute;
+    top: 16px;
+    left: 2.5px;
+    width: 30px;
+    height: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    border-radius: 30px;
+    background: #ae956b;
+  }
+  .contact .contact-item .contact-line .contact-line-big-circle {
+    position: absolute;
+    top: 13px;
+    width: 34px;
+    height: 34px;
+    -webkit-border-radius: 34px;
+    -moz-border-radius: 34px;
+    -ms-border-radius: 34px;
+    -o-border-radius: 34px;
+    border-radius: 34px;
+    border: 1px solid #ae956b;
+  }
+  .contact .contact-item .contact-circle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 62px;
+    height: 62px;
+    -webkit-border-radius: 62px;
+    -moz-border-radius: 62px;
+    -ms-border-radius: 62px;
+    -o-border-radius: 62px;
+    border-radius: 62px;
+    border: 1px solid #ae956b;
+    font-size: 40px;
+    line-height: 62px;
+    text-align: center;
+    color: #ae956b;
+    cursor: pointer;
+    z-index: 999;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+  }
+  .contact .contact-item .contact-circle ~ .contact-line {
+    opacity: 0;
+  }
+  .contact .contact-item .contact-circle:hover ~ .contact-line {
+    opacity: 1;
+  }
+  .contact .contact-item .contact-circle-change {
+    left: 0;
+    color: #000000;
+    background: #ae956b;
+  }
+  .contact .contact-item .contact-circle-change:hover ~ .contact-line {
+    opacity: 0;
+  }
+  .contact .contact-item .contact-line-triangle {
+    position: absolute;
+    left: 500px;
+    top: 25px;
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-right: 12px solid #ae956b;
+  }
+  .contact .contact-item .contact-email {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    text-align: center;
+    color: #ae956b;
+    opacity: 0;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+  }
+  .contact .contact-item .contact-email-change {
+    opacity: 1;
+  }
+  .contact-change {
+    left: 200px;
+    opacity: 1;
+  }
+  .contact-right {
+    position: absolute;
+    top: 200px;
+    left: -500px;
+    width: 600px;
+    height: 600px;
+    opacity: 0;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+  }
+  .contact-right .contact-item {
+    position: relative;
+    margin-top: 20px;
+  }
+  .contact-right .contact-item .contact-line {
+    margin-left: 77px;
+    width: 500px;
+    height: 62px;
+    background: url("../img/timeline-line.png") 50% 50% repeat-x;
+  }
+  .contact-right .contact-item .contact-line .contact-line-small-circle {
+    position: absolute;
+    top: 16px;
+    right: 3px;
+    width: 30px;
+    height: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    border-radius: 30px;
+    background: #ae956b;
+  }
+  .contact-right .contact-item .contact-line .contact-line-big-circle {
+    position: absolute;
+    top: 13px;
+    right: 0;
+    width: 34px;
+    height: 34px;
+    -webkit-border-radius: 34px;
+    -moz-border-radius: 34px;
+    -ms-border-radius: 34px;
+    -o-border-radius: 34px;
+    border-radius: 34px;
+    border: 1px solid #ae956b;
+  }
+  .contact-right .contact-item .contact-line .contact-line-triangle {
+    position: absolute;
+    left: 77px;
+    top: 25px;
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 12px solid #ae956b;
+  }
+  .contact-right .contact-item .contact-circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 62px;
+    height: 62px;
+    -webkit-border-radius: 62px;
+    -moz-border-radius: 62px;
+    -ms-border-radius: 62px;
+    -o-border-radius: 62px;
+    border-radius: 62px;
+    border: 1px solid #ae956b;
+    font-size: 40px;
+    line-height: 62px;
+    text-align: center;
+    color: #ae956b;
+    cursor: pointer;
+    z-index: 999;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+  }
+  .contact-right .contact-item .contact-circle ~ .contact-line {
+    opacity: 0;
+  }
+  .contact-right .contact-item .contact-circle:hover ~ .contact-line {
+    opacity: 1;
+  }
+  .contact-right .contact-item .contact-circle-change {
+    left: 0;
+    color: #000000;
+    background: #ae956b;
+  }
+  .contact-right .contact-item .contact-circle-change:hover ~ .contact-line {
+    opacity: 0;
+  }
+  .contact-right .contact-item .contact-email {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    text-align: center;
+    color: #ae956b;
+    opacity: 0;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+  }
+  .contact-right .contact-item .contact-email-change {
+    opacity: 1;
+  }
+  .contact-right-change {
+    left: 900px;
+    opacity: 1;
+  }
 }
