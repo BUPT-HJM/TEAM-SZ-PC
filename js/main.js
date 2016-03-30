@@ -90,4 +90,17 @@ $(function(){
         $(this).find(".timeline-item-p").css("opacity",1);
         $(this).find(".timeline-item-p-detail").css("opacity",0);
      });
+     /*
+     contact-circle点击效果
+      */
+     $(".contact-circle").click(function(){
+        if($(this).hasClass("contact-circle-change")) {
+            $(this).removeClass("contact-circle-change");
+            $(this).parent().find(".contact-email").removeClass("contact-email-change");
+        }
+        else {
+            $(this).addClass("contact-circle-change");
+            $(this).parent().find(".contact-email").addClass("contact-email-change");
+        }
+     });
 });

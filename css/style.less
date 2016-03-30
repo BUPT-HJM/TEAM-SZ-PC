@@ -537,6 +537,27 @@ html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,tab
             height: @contact-circle-width;
             .border-radius(@contact-circle-width);
             border: 1px solid #ae956b;
+            font-size: 50px;
+            line-height: @contact-circle-width;
+            text-align: center;
+            color: rgb(174, 149, 107);
+            cursor: pointer;
+            z-index: 999;
+            .transition();
+        }
+        & .contact-circle ~ .contact-line {
+            opacity: 0;
+        }
+        & .contact-circle:hover ~ .contact-line {
+            opacity: 1;
+        }
+        & .contact-circle-change {
+            left: 0;
+            color: rgb(0,0,0);
+            background: rgb(174, 149, 107);
+        }
+        & .contact-circle-change:hover ~ .contact-line {
+            opacity: 0;
         }
         & .contact-line-triangle {
             position: absolute;
@@ -547,6 +568,20 @@ html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,tab
             border-top: @contact-triangle-border solid transparent;
             border-bottom: @contact-triangle-border solid transparent;
             border-right: @contact-triangle-border*2 solid #ae956b;
+        }
+        & .contact-email {
+            position: absolute;
+            top: 20px;
+            width: 100%;
+            height: 100%;
+            font-size: 30px;
+            text-align: center;
+            color: #ae956b;
+            opacity: 0;
+            .transition();
+        }
+        & .contact-email-change {
+            opacity: 1;
         }
     }
 }
