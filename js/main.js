@@ -10,7 +10,6 @@ $(function(){
         $(".share-join").addClass("share-join-show");
         $(".snow").addClass(" snow-hide");//雪花消失
         $(".welcome-circle").hover(//消除hover的样式
-            function(){},
             function(){
                 $(".welcome-circle").find("img").addClass("welcome-circle-img-change");
                 $(".small-circle").addClass("small-circle-change");
@@ -18,12 +17,7 @@ $(function(){
         setTimeout(nav_change,1000);
         setTimeout(introduction_show,1500);
         $(".welcome-circle").unbind("click").bind("click",function(e){
-                if($(".nav-line").hasClass("nav-line-change")){
-                    $(".nav-line").removeClass("nav-line-change");
-                }
-                else{
-                    $(".nav-line").addClass("nav-line-change");
-                }
+            $(".nav-line").hasClass("nav-line-change") ? $(".nav-line").removeClass("nav-line-change") : $(".nav-line").addClass("nav-line-change");
             });
         return false;
     });
