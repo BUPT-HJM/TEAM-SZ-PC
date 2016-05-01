@@ -1,102 +1,137 @@
 @charset "utf-8";
-
 //定义圆角大小
-.border-radius(@radius){
-    -webkit-border-radius: @radius;
-    -moz-border-radius: @radius;
-    -ms-border-radius: @radius;
-    -o-border-radius: @radius;
-    border-radius: @radius;
+.border-radius(@radius) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  -ms-border-radius: @radius;
+  -o-border-radius: @radius;
+  border-radius: @radius;
 }
+
 //定义动画
-.animation(@animation-name,@animation-duration,@animation-timing-function,
-           @animation-delay,@animation-iteration-count,@animation-direction){
-   animation: @arguments;
-   /* Firefox: */
-   -moz-animation: @arguments;
-   /* Safari 和 Chrome: */
-   -webkit-animation: @arguments;
-   /* Opera: */
-   -o-animation: @arguments;
+.animation(@animation-name, @animation-duration, @animation-timing-function, @animation-delay, @animation-iteration-count, @animation-direction) {
+  animation: @arguments;
+  /* Firefox: */
+  -moz-animation: @arguments;
+  /* Safari 和 Chrome: */
+  -webkit-animation: @arguments;
+  /* Opera: */
+  -o-animation: @arguments;
 }
+
 //定义过渡
 .transition (@prop: all, @time: 0.3s, @ease: linear) {
-    -webkit-transition: @prop @time @ease;
-    -moz-transition: @prop @time @ease;
-    -o-transition: @prop @time @ease;
-    -ms-transition: @prop @time @ease;
-    transition: @prop @time @ease;
+  -webkit-transition: @prop @time @ease;
+  -moz-transition: @prop @time @ease;
+  -o-transition: @prop @time @ease;
+  -ms-transition: @prop @time @ease;
+  transition: @prop @time @ease;
 }
+
 //垂直居中样式
 .middle-center {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-    -o-transform: translate(-50%,-50%);
-    transform: translate(-50%,-50%);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
-
 
 //通用
-html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,table,caption,th,td,form,fieldset,legend,input,button,textarea,menu
-{margin:0;padding:0;font-family:"Microsoft Yahei",simSun,Arial;}
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+p,
+blockquote,
+pre,
+hr,
+figure,
+table,
+caption,
+th,
+td,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+menu {
+  margin: 0;
+  padding: 0;
+  font-family: "Microsoft Yahei", simSun, Arial;
+}
 
 //欢迎页背景图
-#bg-1,#bg-2 {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    .transition();
+#bg-1,
+#bg-2 {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  .transition();
 }
+
 //首页背景图
 #bg-2 {
-    z-index: -2;
+  z-index: -2;
 }
 
 //页面容器
 #container {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
 }
 
 //logo
 @logo-img-width: 200px;
 //@logo-position-top: 320px;
 .logo {
-    .middle-center;
-    top: 40%;
-    //top: @logo-position-top;
-    width: 50%;
+  .middle-center;
+  top: 40%;
+  //top: @logo-position-top;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  .transition(all, 0.8s, ease-in-out);
+  .logo-img {
+    position: relative;
+    display: block;
+    width: @logo-img-width;
+    height: @logo-img-width;
     margin: 0 auto;
-    text-align: center;
-    .transition(all,0.8s,ease-in-out);
-    .logo-img {
-        position: relative;
-        display: block;
-        width: @logo-img-width;
-        height: @logo-img-width;
-        margin: 0 auto;
-        .transition(all,0.8s,ease-in-out);
-    }
-    .logo-font {
-        position: relative;
-        left: 0;
-        .transition();
-    }
+    .transition(all, 0.8s, ease-in-out);
+  }
+  .logo-font {
+    position: relative;
+    left: 0;
+    .transition();
+  }
 }
 
 //调整scale的transform样式
-.scale-transform(@x,@y) {
-    -webkit-transform: translate(-50%,-50%) scale(@x,@y);
-    -ms-transform: translate(-50%,-50%) scale(@x,@y);
-    -o-transform: translate(-50%,-50%) scale(@x,@y);
-    transform: translate(-50%,-50%) scale(@x,@y);
+.scale-transform(@x, @y) {
+  -webkit-transform: translate(-50%, -50%) scale(@x, @y);
+  -ms-transform: translate(-50%, -50%) scale(@x, @y);
+  -o-transform: translate(-50%, -50%) scale(@x, @y);
+  transform: translate(-50%, -50%) scale(@x, @y);
 }
 
 //欢迎按钮
@@ -104,783 +139,542 @@ html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,tab
 @welcome-circle-width: 80px;
 @small-circle-width: 20px;
 .welcome-circle {
+  .middle-center;
+  top: 75%;
+  //top: @welcome-circle-top;
+  width: @welcome-circle-width;
+  height: @welcome-circle-width;
+  border: #fff solid 2px;
+  z-index: 999;
+  cursor: pointer;
+  .border-radius(@welcome-circle-width);
+  .animation(ripple, 1s, linear, 0s, infinite, normal);
+  .transition(all, 1s, ease-in-out);
+  & img {
+    .transition(all, 0.5s, ease);
+    opacity: 0;
     .middle-center;
-    top: 75%;
-    //top: @welcome-circle-top;
-    width: @welcome-circle-width;
-    height: @welcome-circle-width;
+    .scale-transform(0.1, 0.1);
+  }
+  & .small-circle {
+    width: @small-circle-width;
+    height: @small-circle-width;
     border: #fff solid 2px;
-    z-index: 999;
-    cursor: pointer;
-    .border-radius(@welcome-circle-width);
-    .animation(ripple,1s,linear,0s,infinite,normal);
-    .transition(all,1s,ease-in-out);
-    & img {
-        .transition(all,0.5s,ease);
-        opacity: 0;
-        .middle-center;
-        .scale-transform(0.1,0.1);
-    }
-    & .small-circle {
-        width: @small-circle-width;
-        height: @small-circle-width;
-        border: #fff solid 2px;
-        background-color: #fff;
-        .transition(all,0.8s,ease);
-        opacity: 1;
-        .middle-center;
-        .border-radius(@small-circle-width);
-        .scale-transform(1,1);
-    }
-    &:hover img {
-        opacity: 1;
-        .scale-transform(0.85,0.85);
-    }
-    &:hover .small-circle {
-        opacity: 0;
-        .scale-transform(0.1,0.1);
-    }
+    background-color: #fff;
+    .transition(all, 0.8s, ease);
+    opacity: 1;
+    .middle-center;
+    .border-radius(@small-circle-width);
+    .scale-transform(1, 1);
+  }
+  &:hover img {
+    opacity: 1;
+    .scale-transform(0.85, 0.85);
+  }
+  &:hover .small-circle {
+    opacity: 0;
+    .scale-transform(0.1, 0.1);
+  }
 }
 
 @welcome-circle-change-top: 100px;
 //logo进入首页，变动
 .logo-left-small {
-    left: 300px;
-    .scale-transform(0.8,0.8);
+  left: 300px;
+  .scale-transform(0.8, 0.8);
 }
+
 //logo-font进入首页，变动
 .logo-font-change {
-    left: 350px!important;
-    top: -20px;
-    .scale-transform(1.5,1.5);
+  left: 350px!important;
+  top: -20px;
+  .scale-transform(1.5, 1.5);
 }
+
 //welcome-circle进入首页，变动
 .welcome-circle-change {
-    z-index: 999;
-    left: 95%;
-    top: @welcome-circle-change-top;
+  z-index: 999;
+  left: 95%;
+  top: @welcome-circle-change-top;
 }
+
 //welcome-circle-img进入首页，变动,消除hover的样式
 .welcome-circle-img-change {
-    opacity: 0!important;
+  opacity: 0!important;
 }
+
 //small-circle进入首页，变动，消除hover的样式
 .small-circle-change {
-    opacity: 1!important;
-    .scale-transform(1,1)!important;
+  opacity: 1!important;
+  .scale-transform(1, 1)!important;
 }
 
-@nav-circle-width: 16px;//
+@nav-circle-width: 16px; //
 //右上角菜单
 .nav-line {
-    position: absolute;
-    top:  50px;
-    right: 5%;
-    width: 400px;
+  position: absolute;
+  top: 50px;
+  right: 5%;
+  width: 400px;
+  height: 100px;
+  background: url("../img/line.png") 50% 50% repeat-x;
+  opacity: 0;
+  .transition(all,
+  0.5s,
+  linear);
+  & .nav-item {
+    position: relative;
+    width: 100px;
     height: 100px;
-    background: url("../img/line.png") 50% 50% repeat-x;
-    opacity: 0;
-    .transition(all,0.5s,linear);
-    & .nav-item {
-        position: relative;
-        width: 100px;
-        height: 100px;
-        cursor: pointer;
-        float: left;
-        & img {
-            position: absolute;
-            left: -10px;
-            top: 9px;
-            height: 18px;
-        }
-        & .nav-hover {
-            left: -4px;
-            top: 61px;
-            height: 8px;
-            width: 24px;
-            opacity: 0;
-            .transition(all,0.2s,linear);
-        }
+    cursor: pointer;
+    float: left;
+    & img {
+      position: absolute;
+      left: -10px;
+      top: 9px;
+      height: 18px;
     }
-    & .nav-index {
-        left: 5%;
+    & .nav-hover {
+      left: -4px;
+      top: 61px;
+      height: 8px;
+      width: 24px;
+      opacity: 0;
+      .transition(all,
+      0.2s,
+      linear);
     }
-    & .nav-timeline {
-        left: 20%;
-    }
-    & .nav-contact {
-        left: 35%;
-    }
-    & .nav-circle {
-        position: relative;
-        top: 50%;
-        -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        -o-transform: translateY(-50%);
-        transform: translateY(-50%);
-        .border-radius(@nav-circle-width);
-        width: @nav-circle-width;
-        height: @nav-circle-width;
-        background-color: #fff;
-    }
-    & .nav-index:hover>img{
-        opacity: 1;
-    }
-    & .nav-timeline:hover>img{
-        opacity: 1;
-    }
-    & .nav-contact:hover>img{
-        opacity: 1;
-    }
-    //点击nav小圆弧效果
-    & .nav-under-line-show {
-        opacity: 1!important;
-    }
+  }
+  & .nav-index {
+    left: 5%;
+  }
+  & .nav-timeline {
+    left: 20%;
+  }
+  & .nav-contact {
+    left: 35%;
+  }
+  & .nav-circle {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    .border-radius(@nav-circle-width);
+    width: @nav-circle-width;
+    height: @nav-circle-width;
+    background-color: #fff;
+  }
+  & .nav-index:hover>img {
+    opacity: 1;
+  }
+  & .nav-timeline:hover>img {
+    opacity: 1;
+  }
+  & .nav-contact:hover>img {
+    opacity: 1;
+  }
+  //点击nav小圆弧效果
+  & .nav-under-line-show {
+    opacity: 1!important;
+  }
 }
-
 
 //进入首页后的右上角菜单
 .nav-line-change {
-    width: 600px;
-    opacity: 1;
+  width: 600px;
+  opacity: 1;
 }
 
 //左下角微博分享和加入我们
 .share-join {
-    position: absolute;
-    left: 100px;
-    bottom: 0px;
-    width: 300px;
-    height: 80px;
-    & img {
-        display: inline-block;
-        margin-right: 15px;
-        cursor: pointer;
-    }
-    opacity: 0;
-    .transition;
+  position: absolute;
+  left: 100px;
+  bottom: 0px;
+  width: 300px;
+  height: 80px;
+  & img {
+    display: inline-block;
+    margin-right: 15px;
+    cursor: pointer;
+  }
+  opacity: 0;
+  .transition;
 }
+
 //进入首页后的左下角
 .share-join-show {
-    opacity: 1;
+  opacity: 1;
 }
 
 //团队介绍
 .introduction {
-    position: absolute;
-    left: 200px;
-    top: 50%;
-    width: 800px;
-    height: 100px;
-    padding: 20px;
-    color: #ad956c;
-    opacity: 0;
-    //旋转效果
-    /*-webkit-transform: perspective(200px) rotateX(180deg);
-    -ms-transform: perspective(200px) rotateX(180deg);
-    -o-transform: perspective(200px) rotateX(180deg);
-    transform: perspective(200px) rotateX(180deg);
-    transform-origin: top center;*/
-    .transition(all,1s,ease-in-out);
+  position: absolute;
+  left: 200px;
+  top: 50%;
+  width: 800px;
+  height: 100px;
+  padding: 20px;
+  color: #ad956c;
+  opacity: 0;
+  .transition(all,
+  1s,
+  ease-in-out);
 }
+
 //进入首页团队介绍变动旋转的效果
 .introduction-show {
-    opacity: 1;
-    //进入首页团队介绍变动旋转的效果
-    /*-webkit-transform: perspective(800px) rotateX(0deg);
-    -ms-transform: perspective(800px) rotateX(0deg);
-    -o-transform: perspective(800px) rotateX(0deg);
-    transform: perspective(800px) rotateX(0deg);*/
+  opacity: 1;
 }
 
 
 /*ripple动画*/
-@keyframes ripple
-{
+
+@keyframes ripple {
   0% {
-    box-shadow: 0 0 0 0 rgba(255,255,255, 0.1), 0 0 0 10px rgba(255,255,255, 0.1), 0 0 0 20px rgba(255,255,255, 0.1), 0 0 0 30px rgba(255,255,255, 0.1);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1), 0 0 0 10px rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 30px rgba(255, 255, 255, 0.1);
   }
   100% {
-    box-shadow: 0 0 0 10px rgba(255,255,255, 0.1), 0 0 0 20px rgba(255,255,255, 0.1), 0 0 0 30px rgba(255,255,255, 0.1), 0 0 0 40px rgba(255,255,255, 0);
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 30px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0);
   }
 }
-@-moz-keyframes ripple
-{
+
+@-moz-keyframes ripple {
   0% {
-    box-shadow: 0 0 0 0 rgba(255,255,255, 0.1), 0 0 0 10px rgba(255,255,255, 0.1), 0 0 0 20px rgba(255,255,255, 0.1), 0 0 0 30px rgba(255,255,255, 0.1);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1), 0 0 0 10px rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 30px rgba(255, 255, 255, 0.1);
   }
   100% {
-    box-shadow: 0 0 0 10px rgba(255,255,255, 0.1), 0 0 0 20px rgba(255,255,255, 0.1), 0 0 0 30px rgba(255,255,255, 0.1), 0 0 0 40px rgba(255,255,255, 0);
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 30px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0);
   }
 }
-@-webkit-keyframes ripple
-{
+
+@-webkit-keyframes ripple {
   0% {
-    box-shadow: 0 0 0 0 rgba(255,255,255, 0.1), 0 0 0 10px rgba(255,255,255, 0.1), 0 0 0 20px rgba(255,255,255, 0.1), 0 0 0 30px rgba(255,255,255, 0.1);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1), 0 0 0 10px rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 30px rgba(255, 255, 255, 0.1);
   }
   100% {
-    box-shadow: 0 0 0 10px rgba(255,255,255, 0.1), 0 0 0 20px rgba(255,255,255, 0.1), 0 0 0 30px rgba(255,255,255, 0.1), 0 0 0 40px rgba(255,255,255, 0);
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 30px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0);
   }
 }
-@-o-keyframes ripple
-{
+
+@-o-keyframes ripple {
   0% {
-    box-shadow: 0 0 0 0 rgba(255,255,255, 0.1), 0 0 0 10px rgba(255,255,255, 0.1), 0 0 0 20px rgba(255,255,255, 0.1), 0 0 0 30px rgba(255,255,255, 0.1);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1), 0 0 0 10px rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 30px rgba(255, 255, 255, 0.1);
   }
   100% {
-    box-shadow: 0 0 0 10px rgba(255,255,255, 0.1), 0 0 0 20px rgba(255,255,255, 0.1), 0 0 0 30px rgba(255,255,255, 0.1), 0 0 0 40px rgba(255,255,255, 0);
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 30px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0);
   }
 }
+
+
 /*click nav-item*/
-.introduction-hide{
-    opacity:0;
+
+.introduction-hide {
+  opacity: 0;
 }
-.logo-font-change-second{
-    opacity:0;
+
+.logo-font-change-second {
+  opacity: 0;
 }
 
 @logo-small-scale: 0.4;
 .logo-top-left {
-    left: 0;
-    top: -30px;
-    -webkit-transform: rotate(0deg) scale(@logo-small-scale,@logo-small-scale);
-    -ms-transform: rotate(0deg) scale(@logo-small-scale,@logo-small-scale);
-    -o-transform: rotate(0deg) scale(@logo-small-scale,@logo-small-scale);
-    transform: rotate(0deg) scale(@logo-small-scale,@logo-small-scale);
-    //上面为重置
-    width: 200px;
-    cursor: pointer;
-  .transition(all,1s,linear);
+  left: 0;
+  top: -30px;
+  -webkit-transform: rotate(0deg) scale(@logo-small-scale, @logo-small-scale);
+  -ms-transform: rotate(0deg) scale(@logo-small-scale, @logo-small-scale);
+  -o-transform: rotate(0deg) scale(@logo-small-scale, @logo-small-scale);
+  transform: rotate(0deg) scale(@logo-small-scale, @logo-small-scale);
+  //上面为重置
+  width: 200px;
+  cursor: pointer;
+  .transition(all,
+  1s,
+  linear);
 }
+
 .snow-hide {
-    opacity: 0;
+  opacity: 0;
 }
 
 //时间线
 @timeline-height: 200px;
 @timeline-small-circle-width: 20px;
 @timeline-item-width: 40px;
-@timeline-big-item-width: 60px;
+@timeline-big-item-width: 70px;
 @timeline-item-img-width: 200px;
 @timeline-triangle-border: 10px;
 .timeline {
+  position: absolute;
+  top: 150px;
+  left: 1000px;
+  //left: 200px;
+  width: 1100px;
+  height: @timeline-height;
+  background: url("../img/timeline-line.png") 50% 50% repeat-x;
+  opacity: 0;
+  .transition(all,
+  1s,
+  ease-in-out);
+  & .timeline-small-circle {
     position: absolute;
-    top: 200px;
-    left: 1000px;
-    //left: 200px;
-    width: 1100px;
-    height: @timeline-height;
-    background: url("../img/timeline-line.png") 50% 50% repeat-x;
-    opacity: 0;
-    .transition(all,1s,ease-in-out);
-    & .timeline-small-circle {
+    top: 90px;
+    width: @timeline-small-circle-width;
+    height: @timeline-small-circle-width;
+    .border-radius(@timeline-small-circle-width);
+    background-color: #ae956b;
+    cursor: pointer;
+  }
+  & .timeline-end {
+    right: 0;
+  }
+  // & .timeline-front:hover {
+  //     width: 0;
+  //     height: 0;
+  //     background-color: transparent;
+  //     border-top: @timeline-triangle-border solid transparent;
+  //     border-bottom: @timeline-triangle-border solid transparent;
+  //     border-right: @timeline-triangle-border*2 solid #ae956b;
+  //     .border-radius(0px);
+  // }
+  // & .timeline-end:hover {
+  //     width: 0;
+  //     height: 0;
+  //     background-color: transparent;
+  //     border-top: @timeline-triangle-border solid transparent;
+  //     border-bottom: @timeline-triangle-border solid transparent;
+  //     border-left: @timeline-triangle-border*2 solid #ae956b;
+  //     .border-radius(0px);
+  // }
+  & .timeline-item {
+    position: relative;
+    top: @timeline-height/2-@timeline-item-width/2;
+    float: left;
+    width: @timeline-item-width;
+    height: @timeline-item-width;
+    line-height: @timeline-item-width;
+    margin-left: 200px;
+    background-color: #000;
+    border: 1px solid #ae956b;
+    .border-radius(@timeline-item-width);
+    color: #ae956b;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+    .transition();
+    & .timeline-item-line {
+      position: absolute;
+      left: 0;
+      top: @timeline-item-width;
+      width: @timeline-item-width;
+      height: 0;
+      //height: 200px;
+      background: url("../img/timeline-item-line.png") 50% 50% repeat-y;
+      opacity: 0;
+      .transition();
+    }
+    & .timeline-item-img {
+      position: absolute;
+      top: 0;
+      //top: 70px;
+      //left: -@timeline-item-img-width/2+@timeline-item-width/2;
+      left: @timeline-item-width/2;
+      width: 1px;
+      height: 1px;
+      .border-radius(@timeline-item-img-width);
+      border: 1px solid #ae956b;
+      background-color: #000;
+      opacity: 0;
+      .transition();
+      & .event {
         position: absolute;
-        top: 90px;
-        width: @timeline-small-circle-width;
-        height: @timeline-small-circle-width;
-        .border-radius(@timeline-small-circle-width);
-        background-color: #ae956b;
-        cursor: pointer;
-    }
-    & .timeline-end {
+        top: 0;
+        bottom: 0;
         right: 0;
+        left: 0;
+        width: 100px;
+        height: 100px;
+        margin: auto;
+        line-height: 100px;
+        display: inline-block;
+      }
     }
-
-    & .timeline-front:hover {
-        width: 0;
-        height: 0;
-        background-color: transparent;
-        border-top: @timeline-triangle-border solid transparent;
-        border-bottom: @timeline-triangle-border solid transparent;
-        border-right: @timeline-triangle-border*2 solid #ae956b;
-        .border-radius(0px);
+    & .timeline-item-year {
+      position: absolute;
+      top: -25px;
+      left: 4px;
+      opacity: 0;
+      .transition(opacity);
     }
-    & .timeline-end:hover {
-        width: 0;
-        height: 0;
-        background-color: transparent;
-        border-top: @timeline-triangle-border solid transparent;
-        border-bottom: @timeline-triangle-border solid transparent;
-        border-left: @timeline-triangle-border*2 solid #ae956b;
-        .border-radius(0px);
+    & .timeline-item-p {
+      .transition(opacity);
     }
-    & .timeline-item {
-        position: relative;
-        top: @timeline-height/2-@timeline-item-width/2;
-        float: left;
-        width: @timeline-item-width;
-        height: @timeline-item-width;
-        line-height: @timeline-item-width;
-        margin-left: 200px;
-        background-color: #000;
-        border: 1px solid  #ae956b;
-        .border-radius(@timeline-item-width);
-        color: #ae956b;
-        text-align: center;
-        font-size: 20px;
-        cursor: pointer;
-        .transition();
-        & .timeline-item-line {
-            position: absolute;
-            left: 0;
-            top: @timeline-item-width;
-            width: @timeline-item-width;
-            height: 0;
-            //height: 200px;
-            background: url("../img/timeline-item-line.png") 50% 50% repeat-y;
-            opacity: 0;
-            .transition();
-        }
-        & .timeline-item-img {
-            position: absolute;
-            top: 0;
-            //top: 70px;
-            //left: -@timeline-item-img-width/2+@timeline-item-width/2;
-            left: @timeline-item-width/2;
-            width: 1px;
-            height: 1px;
-            .border-radius(@timeline-item-img-width);
-            border: 1px solid #ae956b;
-            background-color: #000;
-            opacity: 0;
-            .transition();
-        }
-        & .timeline-item-2016 {
-            position: absolute;
-            top: -25px;
-            left: -1px;
-            opacity: 0;
-        }
-        & .timeline-item-p {
-        }
-        & .timeline-item-p-detail {
-            position: absolute;
-            top: 0;
-            left: 8px;
-            opacity: 0;
-        }
+    & .timeline-item-detail {
+      position: absolute;
+      top: 0;
+      left: 8px;
+      opacity: 0;
+      .transition(opacity);
     }
-    & .timeline-item:hover {
-        top: @timeline-height/2-@timeline-big-item-width/2;
-        width: @timeline-big-item-width;
-        height: @timeline-big-item-width;
-        line-height: @timeline-big-item-width;
-        .border-radius(@timeline-big-item-width);
-    }
-    & .timeline-item:hover > .timeline-item-line {
-        top: @timeline-big-item-width;
-        width: @timeline-big-item-width;
-        opacity: 1;
-        height: 40px;
-    }
-    & .timeline-item:hover > .timeline-item-img {
-        top: 90px;
-        left: -@timeline-item-img-width/2+@timeline-big-item-width/2;
-        width: @timeline-item-img-width;
-        height: @timeline-item-img-width;
-        opacity: 1;
-    }
-    & .timeline-item:hover > .timeline-item-2016 {
-        opacity: 1;
-    }
+  }
+  & .tiemline-item:hover > .timeline-item-detail {
+    opacity: 1;
+  }
+  & .timeline-item:hover {
+    top: @timeline-height/2-@timeline-big-item-width/2;
+    width: @timeline-big-item-width;
+    height: @timeline-big-item-width;
+    line-height: @timeline-big-item-width;
+    .border-radius(@timeline-big-item-width);
+  }
+  & .timeline-item:hover > .timeline-item-p {
+    visibility: hidden;
+  }
+  & .timeline-item:hover > .timeline-item-detail {
+    opacity: 1;
+  }
+  & .timeline-item:hover > .timeline-item-year {
+    opacity: 1;
+  }
+  & .timeline-item:hover > .timeline-item-line {
+    top: @timeline-big-item-width;
+    width: @timeline-big-item-width;
+    opacity: 1;
+    height: 40px;
+  }
+  & .timeline-item:hover > .timeline-item-img {
+    top: 90px;
+    left: -@timeline-item-img-width/2+@timeline-big-item-width/2;
+    width: @timeline-item-img-width;
+    height: @timeline-item-img-width;
+    opacity: 1;
+  }
 }
+
 //时间线出现
 .timeline-change {
-    left: 200px;
-    opacity: 1;
+  left: 200px;
+  opacity: 1;
 }
 
 //联系我们
-@contact-width: 450px;
-@contact-line-width: 390px;
-@contact-circle-width: 40px;
-@contact-line-small-circle: 20px;
-@contact-line-big-circle: 24px;
-@contact-triangle-border: 6px;
-.contact {
+.contact-us(@contact-width: 160px,
+@contact-circle-width: 62px,
+@font-size: 20px) {
+  .contact {
     position: absolute;
     top: 200px;
     left: -500px;
     width: @contact-width;
-    height: 600px;
+    height: @contact-width * 3;
     opacity: 0;
-    .transition(all,1s,ease-in-out);
-    & .contact-item {
-        position: relative;
-        margin-top: 20px;
-        & .contact-line {
-            width: @contact-line-width;
-            height: @contact-circle-width;
-            background: url("../img/timeline-line.png") 50% 50% repeat-x;
-            & .contact-line-small-circle {
-                position: absolute;
-                top: @contact-circle-width*0.5-0.5*@contact-line-small-circle;
-                left: 2.5px;
-                width: @contact-line-small-circle;
-                height: @contact-line-small-circle;
-                .border-radius(@contact-line-small-circle);
-                background: #ae956b;
-            }
-            & .contact-line-big-circle {
-                position: absolute;
-                top: (@contact-circle-width*1-1*@contact-line-big-circle*1-2)/2;
-                width: @contact-line-big-circle;
-                height: @contact-line-big-circle;
-                .border-radius(@contact-line-big-circle);
-                border: 1px solid #ae956b;
-                }
-        }
-        & .contact-circle {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: @contact-circle-width;
-            height: @contact-circle-width;
-            .border-radius(@contact-circle-width);
-            border: 2px solid #ae956b;
-            font-size: 20px;
-            line-height: @contact-circle-width;
-            text-align: center;
-            color: rgb(174, 149, 107);
-            cursor: pointer;
-            z-index: 999;
-            .transition();
-        }
-        & .contact-circle ~ .contact-line {
-            opacity: 0;
-        }
-        & .contact-circle:hover ~ .contact-line {
-            opacity: 1;
-        }
-        & .contact-circle-change {
-            left: 0;
-            color: rgb(0,0,0);
-            background: rgb(174, 149, 107);
-        }
-        & .contact-circle-change:hover ~ .contact-line {
-            opacity: 0;
-        }
-        & .contact-line-triangle {
-            position: absolute;
-            left: @contact-line-width;
-            top: @contact-circle-width/2-@contact-triangle-border;
-            width: 0;
-            height: 0;
-            border-top: @contact-triangle-border solid transparent;
-            border-bottom: @contact-triangle-border solid transparent;
-            border-right: @contact-triangle-border*2 solid #ae956b;
-        }
-        & .contact-email {
-            position: absolute;
-            top: 10px;
-            width: 100%;
-            height: 100%;
-            font-size: 20px;
-            text-align: center;
-            color: #ae956b;
-            opacity: 0;
-            .transition();
-        }
-        & .contact-email-change {
-            opacity: 1;
-        }
+    .transition(all,
+    1s,
+    ease-in-out);
+    & .contact-item-hidden {
+      visibility: hidden;
+      opacity: 0;
     }
-}
-.contact-change {
-    left: 200px;
-    opacity: 1;
-}
-.contact-right {
-    position: absolute;
-    top: 200px;
-    left: -500px;
-    width: @contact-width;
-    height: 600px;
-    opacity: 0;
-    .transition(all,1s,ease-in-out);
-    & .contact-item {
-        position: relative;
-        margin-top: 20px;
-        & .contact-line {
-            margin-left: @contact-circle-width+15;
-            width: @contact-line-width;
-            height: @contact-circle-width;
-            background: url("../img/timeline-line.png") 50% 50% repeat-x;
-            & .contact-line-small-circle {
-                position: absolute;
-                top: @contact-circle-width*0.5-0.5*@contact-line-small-circle;
-                right: 3px;
-                width: @contact-line-small-circle;
-                height: @contact-line-small-circle;
-                .border-radius(@contact-line-small-circle);
-                background: #ae956b;
-            }
-            & .contact-line-big-circle {
-                position: absolute;
-                top: (@contact-circle-width*1-1*@contact-line-big-circle*1-2)/2;
-                right: 0;
-                width: @contact-line-big-circle;
-                height: @contact-line-big-circle;
-                .border-radius(@contact-line-big-circle);
-                border: 1px solid #ae956b;
-            }
-            & .contact-line-triangle {
-                position: absolute;
-                left: @contact-circle-width+15;
-                top: @contact-circle-width/2-@contact-triangle-border;
-                width: 0;
-                height: 0;
-                border-top: @contact-triangle-border solid transparent;
-                border-bottom: @contact-triangle-border solid transparent;
-                border-left: @contact-triangle-border*2 solid #ae956b;
-            }
-        }
-        & .contact-circle {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: @contact-circle-width;
-            height: @contact-circle-width;
-            .border-radius(@contact-circle-width);
-            border: 2px solid #ae956b;
-            font-size: 20px;
-            line-height: @contact-circle-width;
-            text-align: center;
-            color: rgb(174, 149, 107);
-            cursor: pointer;
-            z-index: 999;
-            .transition();
-        }
-        & .contact-circle ~ .contact-line {
-            opacity: 0;
-        }
-        & .contact-circle:hover ~ .contact-line {
-            opacity: 1;
-        }
-        & .contact-circle-change {
-            left: 0;
-            color: rgb(0,0,0);
-            background: rgb(174, 149, 107);
-        }
-        & .contact-circle-change:hover ~ .contact-line {
-            opacity: 0;
-        }
-        & .contact-email {
-            position: absolute;
-            top: 10px;
-            width: 100%;
-            height: 100%;
-            font-size: 20px;
-            text-align: center;
-            color: #ae956b;
-            opacity: 0;
-            .transition();
-        }
-        & .contact-email-change {
-            opacity: 1;
-        }
+    & .contact-item-change {
+      visibility: visible !important;
+      opacity: 1 !important;
+      left: -300px !important;
     }
-}
-.contact-right-change {
-    left: 700px;
+    & .contact-item {
+      position: relative;
+      display: inline-block;
+      margin: 20px 10px 0 0;
+      left: 0;
+      .transition(all,
+      .5s,
+      ease-in-out);
+      & .contact-circle {
+        top: 0;
+        right: 0;
+        width: @contact-circle-width;
+        height: @contact-circle-width;
+        .border-radius(@contact-circle-width);
+        border: 2px solid #ae956b;
+        font-size: @font-size * 1.5;
+        line-height: @contact-circle-width;
+        text-align: center;
+        color: rgb(174, 149, 107);
+        cursor: pointer;
+        z-index: 999;
+        .transition();
+      }
+      & .contact-circle:hover {
+        color: rgb(0, 0, 0);
+        background: rgb(174, 149, 107);
+        opacity: 1;
+      }
+      & .contact-circle-change {
+        transform: scale(1.2, 1.2);
+        color: rgb(0, 0, 0);
+        background: rgb(174, 149, 107);
+      }
+      & .contact-link,
+      .contact-name {
+        position: absolute;
+        height: 100%;
+        left: @font-size * 5;
+        font-size: @font-size;
+        color: #ae956b;
+        opacity: 0;
+        .transition();
+        width: 250px;
+      }
+      & .contact-name {
+        top: @font-size / 2;
+      }
+      & .contact-link {
+        top: @font-size *2;
+        cursor: pointer;
+      }
+      & .contact-info-change {
+        opacity: 1;
+      }
+    }
+  }
+  .contact-change {
+    left: 45%;
     opacity: 1;
+  }
 }
 
+.contact-us(120px,
+46px,
+15px);
+#mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .9);
+  display: none;
+  z-index: 999;
+}
+
+#join-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  height: 300px;
+  width: 600px;
+  font-size: 20px;
+  line-height: 135px;
+  text-align: center;
+  border: 3px solid #000;
+  background: rgba(0, 0, 0, .7);
+  color: #ae956b;
+  z-index: 1000;
+}
 
 @media (min-height: 800px) {
-//联系我们
-@contact-width: 600px;
-@contact-line-width: 500px;
-@contact-circle-width: 62px;
-@contact-line-small-circle: 30px;
-@contact-line-big-circle: 34px;
-@contact-triangle-border: 6px;
-.contact {
-    position: absolute;
-    top: 200px;
-    left: -500px;
-    width: @contact-width;
-    height: 600px;
-    opacity: 0;
-    .transition(all,1s,ease-in-out);
-    & .contact-item {
-        position: relative;
-        margin-top: 20px;
-        & .contact-line {
-            width: @contact-line-width;
-            height: @contact-circle-width;
-            background: url("../img/timeline-line.png") 50% 50% repeat-x;
-            & .contact-line-small-circle {
-                position: absolute;
-                top: @contact-circle-width*0.5-0.5*@contact-line-small-circle;
-                left: 2.5px;
-                width: @contact-line-small-circle;
-                height: @contact-line-small-circle;
-                .border-radius(@contact-line-small-circle);
-                background: #ae956b;
-            }
-            & .contact-line-big-circle {
-                position: absolute;
-                top: (@contact-circle-width*1-1*@contact-line-big-circle*1-2)/2;
-                width: @contact-line-big-circle;
-                height: @contact-line-big-circle;
-                .border-radius(@contact-line-big-circle);
-                border: 1px solid #ae956b;
-                }
-        }
-        & .contact-circle {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: @contact-circle-width;
-            height: @contact-circle-width;
-            .border-radius(@contact-circle-width);
-            border: 2px solid #ae956b;
-            font-size: 30px;
-            line-height: @contact-circle-width;
-            text-align: center;
-            color: rgb(174, 149, 107);
-            cursor: pointer;
-            z-index: 999;
-            .transition();
-        }
-        & .contact-circle ~ .contact-line {
-            opacity: 0;
-        }
-        & .contact-circle:hover ~ .contact-line {
-            opacity: 1;
-        }
-        & .contact-circle-change {
-            left: 0;
-            color: rgb(0,0,0);
-            background: rgb(174, 149, 107);
-        }
-        & .contact-circle-change:hover ~ .contact-line {
-            opacity: 0;
-        }
-        & .contact-line-triangle {
-            position: absolute;
-            left: @contact-line-width;
-            top: @contact-circle-width/2-@contact-triangle-border;
-            width: 0;
-            height: 0;
-            border-top: @contact-triangle-border solid transparent;
-            border-bottom: @contact-triangle-border solid transparent;
-            border-right: @contact-triangle-border*2 solid #ae956b;
-        }
-        & .contact-email {
-            position: absolute;
-            top: 20px;
-            width: 100%;
-            height: 100%;
-            font-size: 20px;
-            text-align: center;
-            color: #ae956b;
-            opacity: 0;
-            .transition();
-        }
-        & .contact-email-change {
-            opacity: 1;
-        }
-    }
-}
-.contact-change {
-    left: 200px;
-    opacity: 1;
-}
-.contact-right {
-    position: absolute;
-    top: 200px;
-    left: -500px;
-    width: @contact-width;
-    height: 600px;
-    opacity: 0;
-    .transition(all,1s,ease-in-out);
-    & .contact-item {
-        position: relative;
-        margin-top: 20px;
-        & .contact-line {
-            margin-left: @contact-circle-width+15;
-            width: @contact-line-width;
-            height: @contact-circle-width;
-            background: url("../img/timeline-line.png") 50% 50% repeat-x;
-            & .contact-line-small-circle {
-                position: absolute;
-                top: @contact-circle-width*0.5-0.5*@contact-line-small-circle;
-                right: 3px;
-                width: @contact-line-small-circle;
-                height: @contact-line-small-circle;
-                .border-radius(@contact-line-small-circle);
-                background: #ae956b;
-            }
-            & .contact-line-big-circle {
-                position: absolute;
-                top: (@contact-circle-width*1-1*@contact-line-big-circle*1-2)/2;
-                right: 0;
-                width: @contact-line-big-circle;
-                height: @contact-line-big-circle;
-                .border-radius(@contact-line-big-circle);
-                border: 1px solid #ae956b;
-            }
-            & .contact-line-triangle {
-                position: absolute;
-                left: @contact-circle-width+15;
-                top: @contact-circle-width/2-@contact-triangle-border;
-                width: 0;
-                height: 0;
-                border-top: @contact-triangle-border solid transparent;
-                border-bottom: @contact-triangle-border solid transparent;
-                border-left: @contact-triangle-border*2 solid #ae956b;
-            }
-        }
-        & .contact-circle {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: @contact-circle-width;
-            height: @contact-circle-width;
-            .border-radius(@contact-circle-width);
-            border: 2px solid #ae956b;
-            font-size: 30px;
-            line-height: @contact-circle-width;
-            text-align: center;
-            color: rgb(174, 149, 107);
-            cursor: pointer;
-            z-index: 999;
-            .transition();
-        }
-        & .contact-circle ~ .contact-line {
-            opacity: 0;
-        }
-        & .contact-circle:hover ~ .contact-line {
-            opacity: 1;
-        }
-        & .contact-circle-change {
-            left: 0;
-            color: rgb(0,0,0);
-            background: rgb(174, 149, 107);
-        }
-        & .contact-circle-change:hover ~ .contact-line {
-            opacity: 0;
-        }
-        & .contact-email {
-            position: absolute;
-            top: 20px;
-            width: 100%;
-            height: 100%;
-            font-size: 20px;
-            text-align: center;
-            color: #ae956b;
-            opacity: 0;
-            .transition();
-        }
-        & .contact-email-change {
-            opacity: 1;
-        }
-    }
-}
-.contact-right-change {
-    left: 900px;
-    opacity: 1;
-}
+  .contact-us();
 }

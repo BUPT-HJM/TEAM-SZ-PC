@@ -1,181 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-		<title>TEAM-SZ</title>
-		<link rel="stylesheet" href="css/style.css">
-		<script src="js/jquery.min.js"></script>
-		<script src="js/SnowFlakes.js"></script>
-	</head>
-	<body>
-		<img id="bg-1" src="img/bg1.jpg" alt="">
-		<img id="bg-2" src="img/bg2.jpg" alt="">
-		<div id="container">
-		<canvas id="canvas" class="snow"></canvas>
-			<div class="logo">
-				<img class="logo-img" src="img/LOGO.png" alt="" >
-				<img class="logo-font" src="img/Team-SZ.png" alt="" >
-			</div>
-			<div class="welcome-circle">
-				<img src="img/welcome.png" alt="">
-				<div class="small-circle"></div>
-			</div>
-			<div class="nav-line">
-				<div class="nav-index nav-item">
-					<img src="img/index.png" alt="" class="nav-font">
-					<div class="nav-circle"></div>
-					<img src="img/under.png" alt="" class="nav-hover nav-under-line-show">
-				</div>
-				<div class="nav-timeline nav-item">
-					<img src="img/timeline.png" alt="">
-					<div class="nav-circle"></div>
-					<img src="img/under.png" alt="" class="nav-hover">
-				</div>
-				<div class="nav-contact nav-item">
-					<img src="img/contact.png" alt="">
-					<div class="nav-circle"></div>
-					<img src="img/under.png" alt="" class="nav-hover">
-				</div>
-			</div>
-			<div class="share-join">
-				<img src="img/weibo-share.png" alt="" class="weibo-share">
-				<img src="img/join-us.png" alt="" class="join-us">
-			</div>
-			<div class="introduction">
-				<p>一个团队，从南到北。</p>
-				<br>
-				<p>第一句长长长的介绍，可能还要更长一点，再长一点再长一点再长一点。</p>
-				<br>
-				<p>第二句介绍略长略长略长，可爱的宝宝。</p>
-			</div>
-			<div class="timeline">
-				<div class="timeline-small-circle timeline-front"></div>
-				<div class="timeline-item">
-					<p class="timeline-item-p">12</p>
-					<p class="timeline-item-p-detail">1/12</p>
-					<div class="timeline-item-line"></div>
-					<div class="timeline-item-img"></div>
-					<img src="img/2016.png" alt="" class="timeline-item-2016">
-				</div>
-				<div class="timeline-item">
-					<p class="timeline-item-p">23</p>
-					<p class="timeline-item-p-detail">1/23</p>
-					<div class="timeline-item-line"></div>
-					<div class="timeline-item-img"></div>
-					<img src="img/2016.png" alt="" class="timeline-item-2016">
-				</div>
-				<div class="timeline-item">
-					<p class="timeline-item-p">1</p>
-					<p class="timeline-item-p-detail">2/01</p>
-					<div class="timeline-item-line"></div>
-					<div class="timeline-item-img"></div>
-					<img src="img/2016.png" alt="" class="timeline-item-2016">
-				</div>
-				<div class="timeline-item">
-					<p class="timeline-item-p">2</p>
-					<p class="timeline-item-p-detail">2/02</p>
-					<div class="timeline-item-line"></div>
-					<div class="timeline-item-img"></div>
-					<img src="img/2016.png" alt="" class="timeline-item-2016">
-				</div>
-				<div class="timeline-small-circle timeline-end"></div>
-			</div>
-			<div class="contact">
-				<div class="contact-item">
-					<div class="contact-circle">Mo</div>
-					<div class="contact-line">
-						<div class="contact-line-small-circle"></div>
-						<div class="contact-line-big-circle"></div>
-						<div class="contact-line-triangle"></div>
-					</div>
-					<div class="contact-email">fdsfsdafaf@bupt.edu.cn</div>
-				</div>
-				<div class="contact-item">
-					<div class="contact-circle">M</div>
-					<div class="contact-line">
-						<div class="contact-line-small-circle"></div>
-						<div class="contact-line-big-circle"></div>
-						<div class="contact-line-triangle"></div>
-					</div>
-					<div class="contact-email">fdsfsdafaf@bupt.edu.cn</div>
-				</div>
-				<div class="contact-item">
-					<div class="contact-circle">M</div>
-					<div class="contact-line">
-						<div class="contact-line-small-circle"></div>
-						<div class="contact-line-big-circle"></div>
-						<div class="contact-line-triangle"></div>
-					</div>
-					<div class="contact-email">fdsfsdafaf@bupt.edu.cn</div>
-				</div>
-				<div class="contact-item">
-					<div class="contact-circle">M</div>
-					<div class="contact-line">
-						<div class="contact-line-small-circle"></div>
-						<div class="contact-line-big-circle"></div>
-						<div class="contact-line-triangle"></div>
-					</div>
-					<div class="contact-email">fdsfsdafaf@bupt.edu.cn</div>
-				</div>
-				<div class="contact-item">
-					<div class="contact-circle">M</div>
-					<div class="contact-line">
-						<div class="contact-line-small-circle"></div>
-						<div class="contact-line-big-circle"></div>
-						<div class="contact-line-triangle"></div>
-					</div>
-					<div class="contact-email">fdsfsdafaf@bupt.edu.cn</div>
-				</div>
-			</div>
-			<div class="contact-right">
-				<div class="contact-item">
-					<div class="contact-circle">M</div>
-					<div class="contact-line">
-						<div class="contact-line-small-circle"></div>
-						<div class="contact-line-big-circle"></div>
-						<div class="contact-line-triangle"></div>
-					</div>
-					<div class="contact-email">fdsfsdafaf@bupt.edu.cn</div>
-				</div>
-				<div class="contact-item">
-					<div class="contact-circle">M</div>
-					<div class="contact-line">
-						<div class="contact-line-small-circle"></div>
-						<div class="contact-line-big-circle"></div>
-						<div class="contact-line-triangle"></div>
-					</div>
-					<div class="contact-email">fdsfsdafaf@bupt.edu.cn</div>
-				</div>
-				<div class="contact-item">
-					<div class="contact-circle">M</div>
-					<div class="contact-line">
-						<div class="contact-line-small-circle"></div>
-						<div class="contact-line-big-circle"></div>
-						<div class="contact-line-triangle"></div>
-					</div>
-					<div class="contact-email">fdsfsdafaf@bupt.edu.cn</div>
-				</div>
-				<div class="contact-item">
-					<div class="contact-circle">M</div>
-					<div class="contact-line">
-						<div class="contact-line-small-circle"></div>
-						<div class="contact-line-big-circle"></div>
-						<div class="contact-line-triangle"></div>
-					</div>
-					<div class="contact-email">fdsfsdafaf@bupt.edu.cn</div>
-				</div>
-				<div class="contact-item">
-					<div class="contact-circle">M</div>
-					<div class="contact-line">
-						<div class="contact-line-small-circle"></div>
-						<div class="contact-line-big-circle"></div>
-						<div class="contact-line-triangle"></div>
-					</div>
-					<div class="contact-email">fdsfsdafaf@bupt.edu.cn</div>
-				</div>
-			</div>
-		</div>
-		<script src="js/main.js"></script>
-	</body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <title>TEAM-SZ</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/SnowFlakes.js"></script>
+</head>
+
+<body>
+  <img id="bg-1" src="img/bg1.jpg" alt="">
+  <img id="bg-2" src="img/bg2.jpg" alt="">
+  <div id="container">
+    <canvas id="canvas" class="snow"></canvas>
+    <div class="logo">
+      <img class="logo-img" src="img/LOGO.png" alt="">
+      <img class="logo-font" src="img/Team-SZ.png" alt="">
+    </div>
+    <div class="welcome-circle">
+      <img src="img/welcome.png" alt="">
+      <div class="small-circle"></div>
+    </div>
+    <div class="nav-line">
+      <div class="nav-index nav-item">
+        <img src="img/index.png" alt="" class="nav-font">
+        <div class="nav-circle"></div>
+        <img src="img/under.png" alt="" class="nav-hover nav-under-line-show">
+      </div>
+      <div class="nav-timeline nav-item">
+        <img src="img/timeline.png" alt="">
+        <div class="nav-circle"></div>
+        <img src="img/under.png" alt="" class="nav-hover">
+      </div>
+      <div class="nav-contact nav-item">
+        <img src="img/contact.png" alt="">
+        <div class="nav-circle"></div>
+        <img src="img/under.png" alt="" class="nav-hover">
+      </div>
+    </div>
+    <div class="share-join">
+      <!-- <img src="img/weibo-share.png" alt="" class="weibo-share"> -->
+      <img src="img/join-us.png" alt="" class="join-us">
+    </div>
+    <div id="mask">
+      <div id="join-info">
+        发送个人简介到：marksz@vip.qq.com
+        <br>
+        Team-SZ期待你的加入！
+      </div>
+    </div>
+    <div class="introduction">
+      <p>我们来自八闽之地</p>
+      <br>
+      <p>怀着同样的激情与梦想，只做酷酷的事</p>
+      <br>
+      <p>用设计甩开空想，用代码谱写辉煌</p>
+    </div>
+    <div class="timeline">
+      <div class="timeline-small-circle timeline-front"></div>
+      <div class="timeline-item">
+        <div class="timeline-item-p">7</div>
+        <div class="timeline-item-detail">10/07</div>
+        <div class="timeline-item-line"></div>
+        <div class="timeline-item-img">
+          <div class="event">团队成立</div>
+        </div>
+        <img src="img/2013.png" alt="" class="timeline-item-year">
+      </div>
+      <div class="timeline-item">
+        <p class="timeline-item-p">25</p>
+        <p class="timeline-item-detail">08/25</p>
+        <div class="timeline-item-line"></div>
+        <div class="timeline-item-img">
+          <div class="event">Logo确定</div>
+        </div>
+        <img src="img/2014.png" alt="" class="timeline-item-year">
+      </div>
+      <div class="timeline-item">
+        <p class="timeline-item-p">8</p>
+        <p class="timeline-item-detail">08/08</p>
+        <div class="timeline-item-line"></div>
+        <div class="timeline-item-img">
+          <div class="event">新成员加入</div>
+        </div>
+        <img src="img/2015.png" alt="" class="timeline-item-year">
+      </div>
+      <div class="timeline-item">
+        <p class="timeline-item-p">3</p>
+        <p class="timeline-item-detail">05/03</p>
+        <div class="timeline-item-line"></div>
+        <div class="timeline-item-img">
+          <div class="event">首页上线</div>
+        </div>
+        <img src="img/2016.png" alt="" class="timeline-item-year">
+      </div>
+      <div class="timeline-small-circle timeline-end"></div>
+    </div>
+    <div class="contact">
+    </div>
+  <script src="js/main.js"></script>
+  <script src="js/data.js"></script>
+</body>
+
 </html>
